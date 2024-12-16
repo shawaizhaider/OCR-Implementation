@@ -1,0 +1,20 @@
+{
+    "files.autoSave": "onWindowChange",
+    "cmake.cmakePath": "/tools/Xilinx/Vitis/2022.2/tps/lnx64/cmake-3.3.2/bin/cmake",
+    "cmake.options.advanced": {
+
+        "build": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "launch": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        },
+        "debug": {
+            "statusBarVisibility": "inherit",
+            "inheritDefault": "visible"
+        }
+    }
+    
+}

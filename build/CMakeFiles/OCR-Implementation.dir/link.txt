@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/OCR-Implementation.dir/src/main.cpp.o  -o OCR-Implementation -rdynamic 
