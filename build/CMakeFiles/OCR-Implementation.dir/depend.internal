@@ -3,11 +3,25 @@
 
 CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o
  /home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
  /home/shawaiz-haider/OOP/EndSemProject/src/layer.cpp
 CMakeFiles/OCR-Implementation.dir/src/main.cpp.o
+ /home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
  /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp
+CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o
+ /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/src/matrix.cpp
+CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o
+ /home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/src/neuralNetwork.cpp
 CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
  /home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp

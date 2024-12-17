@@ -10,4 +10,6 @@ add_executable(
     src/main.cpp
     src/neuron.cpp
     src/layer.cpp
+    src/matrix.cpp
+    src/neuralNetwork.cpp
 )

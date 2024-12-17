@@ -177,6 +177,60 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/matrix.o: src/matrix.cpp.o
+
+.PHONY : src/matrix.o
+
+# target to build an object file
+src/matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o
+.PHONY : src/matrix.cpp.o
+
+src/matrix.i: src/matrix.cpp.i
+
+.PHONY : src/matrix.i
+
+# target to preprocess a source file
+src/matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.i
+.PHONY : src/matrix.cpp.i
+
+src/matrix.s: src/matrix.cpp.s
+
+.PHONY : src/matrix.s
+
+# target to generate assembly for a file
+src/matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.s
+.PHONY : src/matrix.cpp.s
+
+src/neuralNetwork.o: src/neuralNetwork.cpp.o
+
+.PHONY : src/neuralNetwork.o
+
+# target to build an object file
+src/neuralNetwork.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o
+.PHONY : src/neuralNetwork.cpp.o
+
+src/neuralNetwork.i: src/neuralNetwork.cpp.i
+
+.PHONY : src/neuralNetwork.i
+
+# target to preprocess a source file
+src/neuralNetwork.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.i
+.PHONY : src/neuralNetwork.cpp.i
+
+src/neuralNetwork.s: src/neuralNetwork.cpp.s
+
+.PHONY : src/neuralNetwork.s
+
+# target to generate assembly for a file
+src/neuralNetwork.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.s
+.PHONY : src/neuralNetwork.cpp.s
+
 src/neuron.o: src/neuron.cpp.o
 
 .PHONY : src/neuron.o
@@ -219,6 +273,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/matrix.o"
+	@echo "... src/matrix.i"
+	@echo "... src/matrix.s"
+	@echo "... src/neuralNetwork.o"
+	@echo "... src/neuralNetwork.i"
+	@echo "... src/neuralNetwork.s"
 	@echo "... src/neuron.o"
 	@echo "... src/neuron.i"
 	@echo "... src/neuron.s"

@@ -28,5 +28,5 @@ void Neuron::fastSigmoidDifferentiate()
 
 Neuron::~Neuron() {
     // TODO: Implement destructor
-    delete this;
+    // delete this;
 }

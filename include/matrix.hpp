@@ -14,11 +14,15 @@ class Matrix{
     public:
         Matrix(int numRows, int numcols, bool randomize);
         Matrix* transpose();
+        void printMatrix();
         // settters
-        void setMatrixVal(int rowIndex, int colIndex, double val);
+        void setMatrixVal(int rowIndex, int colIndex, double val){this->matrixVals[rowIndex][colIndex] = val;}
         // getters
-        double getMatrixVal(int rowIndex, int colIndex);
+        double getMatrixVal(int rowIndex, int colIndex){return this->matrixVals[rowIndex][colIndex];}
         double generateRandomVal();
+
+        int getNumRows(){return this->numRows;}
+        int getNumCols(){return this->numCols;}
         ~Matrix();    
 };
 

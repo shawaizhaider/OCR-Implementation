@@ -9,11 +9,44 @@ Layer::Layer(int size)
         this->neurons.push_back(neuron);
     }
 }
+void Layer::setVal(int index, double val)
+{
+    this->neurons[index]->initNeuron(val);
+}
+
+/*TODO: Fix memory leaks*/
+Matrix* Layer::convertValsToMatrix()
+{
+    Matrix *matrix = new Matrix(1, this->layerSize, false);
+    for(int i = 0; i < this->layerSize; i++)
+    {
+        matrix->setMatrixVal(0, i, this->neurons[i]->getNeuronVal());
+    }
+    return matrix;
+}
+Matrix* Layer::convertActivationValsToMatrix()
+{
+    Matrix *matrix = new Matrix(1, this->layerSize, false);
+    for(int i = 0; i < this->layerSize; i++)
+    {
+        matrix->setMatrixVal(0, i, this->neurons[i]->getNeuronActivation());
+    }
+    return matrix;
+}
+Matrix* Layer::convertDifferentiatedValsToMatrix()
+{
+    Matrix *matrix = new Matrix(1, this->layerSize, false);
+    for(int i = 0; i < this->layerSize; i++)
+    {
+        matrix->setMatrixVal(0, i, this->neurons[i]->getDifferentiatedVal());
+    }
+    return matrix;
+}
 Layer::~Layer()
 {
     //TODO: Implement destructor
-    for(int i = 0; i < this->layerSize; i++)
-    {
-        delete this->neurons[i];
-    }
+    // for(int i = 0; i < this->layerSize; i++)
+    // {
+    //     delete this->neurons[i];
+    // }
 }

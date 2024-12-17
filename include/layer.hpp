@@ -5,6 +5,7 @@
 #include <math.h>
 #include <vector>
 #include "neuron.hpp"
+#include "matrix.hpp"
 using namespace std;
 
 class Layer{
@@ -13,6 +14,10 @@ class Layer{
         vector<Neuron*> neurons;
     public:
         Layer(int size);
+        void setVal(int index, double val);
+        Matrix* convertValsToMatrix();
+        Matrix* convertActivationValsToMatrix();
+        Matrix* convertDifferentiatedValsToMatrix();
         ~Layer();    
 };
 
