@@ -1,1 +1,1 @@
-/usr/bin/c++    -std=c++11   CMakeFiles/OCR-Implementation.dir/src/main.cpp.o  -o OCR-Implementation -rdynamic 
+/usr/bin/g++    -std=c++11   CMakeFiles/OCR-Implementation.dir/src/main.cpp.o CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o  -o OCR-Implementation -rdynamic 

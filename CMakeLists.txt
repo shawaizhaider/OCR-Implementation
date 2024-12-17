@@ -5,4 +5,9 @@ project(OCR-Implementation)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 # Add the executable
-add_executable(OCR-Implementation src/main.cpp)
+add_executable(
+    OCR-Implementation
+    src/main.cpp
+    src/neuron.cpp
+    src/layer.cpp
+)

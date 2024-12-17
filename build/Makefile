@@ -123,6 +123,33 @@ OCR-Implementation/fast:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/build
 .PHONY : OCR-Implementation/fast
 
+src/layer.o: src/layer.cpp.o
+
+.PHONY : src/layer.o
+
+# target to build an object file
+src/layer.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o
+.PHONY : src/layer.cpp.o
+
+src/layer.i: src/layer.cpp.i
+
+.PHONY : src/layer.i
+
+# target to preprocess a source file
+src/layer.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.i
+.PHONY : src/layer.cpp.i
+
+src/layer.s: src/layer.cpp.s
+
+.PHONY : src/layer.s
+
+# target to generate assembly for a file
+src/layer.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.s
+.PHONY : src/layer.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -150,6 +177,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/neuron.o: src/neuron.cpp.o
+
+.PHONY : src/neuron.o
+
+# target to build an object file
+src/neuron.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o
+.PHONY : src/neuron.cpp.o
+
+src/neuron.i: src/neuron.cpp.i
+
+.PHONY : src/neuron.i
+
+# target to preprocess a source file
+src/neuron.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.i
+.PHONY : src/neuron.cpp.i
+
+src/neuron.s: src/neuron.cpp.s
+
+.PHONY : src/neuron.s
+
+# target to generate assembly for a file
+src/neuron.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.s
+.PHONY : src/neuron.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -159,9 +213,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OCR-Implementation"
+	@echo "... src/layer.o"
+	@echo "... src/layer.i"
+	@echo "... src/layer.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/neuron.o"
+	@echo "... src/neuron.i"
+	@echo "... src/neuron.s"
 .PHONY : help
 
 

@@ -60,15 +60,15 @@ include CMakeFiles/OCR-Implementation.dir/flags.make
 CMakeFiles/OCR-Implementation.dir/src/main.cpp.o: CMakeFiles/OCR-Implementation.dir/flags.make
 CMakeFiles/OCR-Implementation.dir/src/main.cpp.o: ../src/main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OCR-Implementation.dir/src/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OCR-Implementation.dir/src/main.cpp.o -c /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OCR-Implementation.dir/src/main.cpp.o -c /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp
 
 CMakeFiles/OCR-Implementation.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OCR-Implementation.dir/src/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp > CMakeFiles/OCR-Implementation.dir/src/main.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp > CMakeFiles/OCR-Implementation.dir/src/main.cpp.i
 
 CMakeFiles/OCR-Implementation.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OCR-Implementation.dir/src/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp -o CMakeFiles/OCR-Implementation.dir/src/main.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp -o CMakeFiles/OCR-Implementation.dir/src/main.cpp.s
 
 CMakeFiles/OCR-Implementation.dir/src/main.cpp.o.requires:
 
@@ -81,17 +81,69 @@ CMakeFiles/OCR-Implementation.dir/src/main.cpp.o.provides: CMakeFiles/OCR-Implem
 CMakeFiles/OCR-Implementation.dir/src/main.cpp.o.provides.build: CMakeFiles/OCR-Implementation.dir/src/main.cpp.o
 
 
+CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o: CMakeFiles/OCR-Implementation.dir/flags.make
+CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o: ../src/neuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o -c /home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp
+
+CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp > CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.i
+
+CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp -o CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.s
+
+CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.requires:
+
+.PHONY : CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.requires
+
+CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.provides: CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.requires
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.provides.build
+.PHONY : CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.provides
+
+CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.provides.build: CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o
+
+
+CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o: CMakeFiles/OCR-Implementation.dir/flags.make
+CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o: ../src/layer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o -c /home/shawaiz-haider/OOP/EndSemProject/src/layer.cpp
+
+CMakeFiles/OCR-Implementation.dir/src/layer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OCR-Implementation.dir/src/layer.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/shawaiz-haider/OOP/EndSemProject/src/layer.cpp > CMakeFiles/OCR-Implementation.dir/src/layer.cpp.i
+
+CMakeFiles/OCR-Implementation.dir/src/layer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OCR-Implementation.dir/src/layer.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/shawaiz-haider/OOP/EndSemProject/src/layer.cpp -o CMakeFiles/OCR-Implementation.dir/src/layer.cpp.s
+
+CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.requires:
+
+.PHONY : CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.requires
+
+CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.provides: CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.provides.build
+.PHONY : CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.provides
+
+CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.provides.build: CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o
+
+
 # Object files for target OCR-Implementation
 OCR__Implementation_OBJECTS = \
-"CMakeFiles/OCR-Implementation.dir/src/main.cpp.o"
+"CMakeFiles/OCR-Implementation.dir/src/main.cpp.o" \
+"CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o" \
+"CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o"
 
 # External object files for target OCR-Implementation
 OCR__Implementation_EXTERNAL_OBJECTS =
 
 OCR-Implementation: CMakeFiles/OCR-Implementation.dir/src/main.cpp.o
+OCR-Implementation: CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o
+OCR-Implementation: CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o
 OCR-Implementation: CMakeFiles/OCR-Implementation.dir/build.make
 OCR-Implementation: CMakeFiles/OCR-Implementation.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable OCR-Implementation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable OCR-Implementation"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OCR-Implementation.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +152,8 @@ CMakeFiles/OCR-Implementation.dir/build: OCR-Implementation
 .PHONY : CMakeFiles/OCR-Implementation.dir/build
 
 CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/src/main.cpp.o.requires
+CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.requires
+CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.requires
 
 .PHONY : CMakeFiles/OCR-Implementation.dir/requires
 

@@ -6,9 +6,35 @@
 
 #IncludeRegexTransform: 
 
+/home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
+iostream
+-
+math.h
+-
+vector
+-
+neuron.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
+
+/home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
+iostream
+-
+
+/home/shawaiz-haider/OOP/EndSemProject/src/layer.cpp
+../include/layer.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
+
 /home/shawaiz-haider/OOP/EndSemProject/src/main.cpp
 iostream
 -
 cstdlib
+-
+../include/neuron.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
+
+/home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp
+../include/neuron.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
+math.h
 -
 
