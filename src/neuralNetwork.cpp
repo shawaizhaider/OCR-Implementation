@@ -45,7 +45,7 @@ void neuralNetwork::printNetwork()
         {
             cout<<"\t\t**************************************"<<endl;
             cout<<"Weights Matrix between Layer "<<i<<" and Layer "<<i+1<<endl;
-            this->getWeightMatrix(0)->printMatrix();
+            weightsMatrices[i]->printMatrix();
             cout<<"\t\t**************************************"<<endl;
         }
     }
@@ -66,6 +66,7 @@ void neuralNetwork::feedForward() {
         );
 
     if(i != 0) {
+      delete a;
       a = this->getActivationMatrix(i);
     }
 
@@ -76,7 +77,6 @@ void neuralNetwork::feedForward() {
     }
 
     delete a;
-    delete b;
     delete c;
   }
 }
