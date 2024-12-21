@@ -5,10 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/shawaiz-haider/OOP/EndSemProject/src/layer.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o"
-  "/home/shawaiz-haider/OOP/EndSemProject/src/main.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/main.cpp.o"
   "/home/shawaiz-haider/OOP/EndSemProject/src/matrix.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o"
   "/home/shawaiz-haider/OOP/EndSemProject/src/neuralNetwork.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o"
   "/home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o"
+  "/home/shawaiz-haider/OOP/EndSemProject/src/utils/math.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o"
+  "/home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

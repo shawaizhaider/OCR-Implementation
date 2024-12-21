@@ -1,4 +1,5 @@
 #include "../include/neuralNetwork.hpp"
+#include "../include/utils/math.hpp"
 
 neuralNetwork::neuralNetwork(vector<int> topology)
 {
@@ -40,7 +41,44 @@ void neuralNetwork::printNetwork()
         this->layers[i]->convertActivationValsToMatrix()->printMatrix();
         cout << "Neuron Differentiated Values" << endl;
         this->layers[i]->convertDifferentiatedValsToMatrix()->printMatrix();
+        if(i<this->numLayers-1)
+        {
+            cout<<"\t\t**************************************"<<endl;
+            cout<<"Weights Matrix between Layer "<<i<<" and Layer "<<i+1<<endl;
+            this->getWeightMatrix(0)->printMatrix();
+            cout<<"\t\t**************************************"<<endl;
+        }
     }
+}
+
+void neuralNetwork::feedForward() {
+  Matrix *a;  // Matrix of neurons to the left
+  Matrix *b;  // Matrix of weights to the right of layer
+  Matrix *c;  // Matrix of neurons to the next layer
+
+  for(int i = 0; i < (this->numLayers - 1); i++) {
+    a = this->getNeuronMatrix(i);
+    b = this->getWeightMatrix(i);
+    c = new Matrix(
+          a->getNumRows(),
+          b->getNumCols(),
+          false
+        );
+
+    if(i != 0) {
+      a = this->getActivationMatrix(i);
+    }
+
+    utils::Math::multiplyMatrix(a, b, c);
+
+    for(int c_index = 0; c_index < c->getNumCols(); c_index++) {
+      this->setNeuronVal(i + 1, c_index, c->getMatrixVal(0, c_index) /* + this->bias*/);
+    }
+
+    delete a;
+    delete b;
+    delete c;
+  }
 }
 
 neuralNetwork::~neuralNetwork()

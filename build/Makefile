@@ -150,33 +150,6 @@ src/layer.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.s
 .PHONY : src/layer.cpp.s
 
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
 src/matrix.o: src/matrix.cpp.o
 
 .PHONY : src/matrix.o
@@ -258,6 +231,60 @@ src/neuron.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.s
 .PHONY : src/neuron.cpp.s
 
+src/utils/math.o: src/utils/math.cpp.o
+
+.PHONY : src/utils/math.o
+
+# target to build an object file
+src/utils/math.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o
+.PHONY : src/utils/math.cpp.o
+
+src/utils/math.i: src/utils/math.cpp.i
+
+.PHONY : src/utils/math.i
+
+# target to preprocess a source file
+src/utils/math.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.i
+.PHONY : src/utils/math.cpp.i
+
+src/utils/math.s: src/utils/math.cpp.s
+
+.PHONY : src/utils/math.s
+
+# target to generate assembly for a file
+src/utils/math.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.s
+.PHONY : src/utils/math.cpp.s
+
+tests/feedForward.o: tests/feedForward.cpp.o
+
+.PHONY : tests/feedForward.o
+
+# target to build an object file
+tests/feedForward.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o
+.PHONY : tests/feedForward.cpp.o
+
+tests/feedForward.i: tests/feedForward.cpp.i
+
+.PHONY : tests/feedForward.i
+
+# target to preprocess a source file
+tests/feedForward.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.i
+.PHONY : tests/feedForward.cpp.i
+
+tests/feedForward.s: tests/feedForward.cpp.s
+
+.PHONY : tests/feedForward.s
+
+# target to generate assembly for a file
+tests/feedForward.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.s
+.PHONY : tests/feedForward.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -270,9 +297,6 @@ help:
 	@echo "... src/layer.o"
 	@echo "... src/layer.i"
 	@echo "... src/layer.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 	@echo "... src/matrix.o"
 	@echo "... src/matrix.i"
 	@echo "... src/matrix.s"
@@ -282,6 +306,12 @@ help:
 	@echo "... src/neuron.o"
 	@echo "... src/neuron.i"
 	@echo "... src/neuron.s"
+	@echo "... src/utils/math.o"
+	@echo "... src/utils/math.i"
+	@echo "... src/utils/math.s"
+	@echo "... tests/feedForward.o"
+	@echo "... tests/feedForward.i"
+	@echo "... tests/feedForward.s"
 .PHONY : help
 
 

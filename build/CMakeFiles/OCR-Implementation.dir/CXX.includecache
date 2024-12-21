@@ -42,21 +42,23 @@ layer.hpp
 iostream
 -
 
+/home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
+iostream
+-
+vector
+-
+fstream
+-
+sstream
+-
+assert.h
+-
+../matrix.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
+
 /home/shawaiz-haider/OOP/EndSemProject/src/layer.cpp
 ../include/layer.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
-
-/home/shawaiz-haider/OOP/EndSemProject/src/main.cpp
-iostream
--
-cstdlib
--
-../include/neuron.hpp
-/home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
-../include/matrix.hpp
-/home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
-../include/neuralNetwork.hpp
-/home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
 
 /home/shawaiz-haider/OOP/EndSemProject/src/matrix.cpp
 ../include/matrix.hpp
@@ -67,10 +69,28 @@ random
 /home/shawaiz-haider/OOP/EndSemProject/src/neuralNetwork.cpp
 ../include/neuralNetwork.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
+../include/utils/math.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
 
 /home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp
 ../include/neuron.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
 math.h
+-
+
+/home/shawaiz-haider/OOP/EndSemProject/src/utils/math.cpp
+../../include/utils/math.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
+
+/home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp
+../include/neuralNetwork.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
+../include/matrix.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
+vector
+-
+iostream
+-
+cstdlib
 -
 

@@ -20,12 +20,21 @@ class neuralNetwork{
         vector<int> topology;
         int numLayers;
         vector<double> inputVals;
+        vector<Matrix*> weightsMatrices;
+        vector<Layer*> layers;
+        vector<double> input;
     public: 
         neuralNetwork(vector<int> topology);
-        vector<Layer*> layers;
-        vector<Matrix*> weightsMatrices;
         void setCurrentInput(vector<double> inputVals);
         void printNetwork();
+        void feedForward();
+
+        Matrix* getNeuronMatrix(int index){return this->layers[index]->convertValsToMatrix();}
+        Matrix* getActivationMatrix(int index){return this->layers[index]->convertActivationValsToMatrix();}
+        Matrix* getDifferentiatedMatrix(int index){return this->layers[index]->convertDifferentiatedValsToMatrix();}
+        Matrix* getWeightMatrix(int index){return this->weightsMatrices[index];}
+
+        void setNeuronVal(int layerIndex, int neuronIndex, double val){this->layers[layerIndex]->setVal(neuronIndex, val);}
         ~neuralNetwork();
 };
 
