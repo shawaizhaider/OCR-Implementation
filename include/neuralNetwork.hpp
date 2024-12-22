@@ -23,6 +23,11 @@ class neuralNetwork{
         vector<Matrix*> weightsMatrices;
         vector<Layer*> layers;
         vector<double> input;
+        /*Errors of model or differences*/
+        double globalError;   // Total Error
+        vector<double> errors;  // Errors of each target and output pair
+        vector<double> iterationErrors; // Total Error in each iteration
+        vector<double> targets;
     public: 
         neuralNetwork(vector<int> topology);
         void setCurrentInput(vector<double> inputVals);
@@ -33,8 +38,11 @@ class neuralNetwork{
         Matrix* getActivationMatrix(int index){return this->layers[index]->convertActivationValsToMatrix();}
         Matrix* getDifferentiatedMatrix(int index){return this->layers[index]->convertDifferentiatedValsToMatrix();}
         Matrix* getWeightMatrix(int index){return this->weightsMatrices[index];}
-
         void setNeuronVal(int layerIndex, int neuronIndex, double val){this->layers[layerIndex]->setVal(neuronIndex, val);}
+        double getTotalError(){return this->globalError;};
+        vector<double> getErrors(){return this->errors;};
+        void setTargets(vector<double> targets){this->targets = targets;}
+        void setErrors();
         ~neuralNetwork();
 };
 
