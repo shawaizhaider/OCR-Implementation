@@ -33,6 +33,8 @@ iostream
 -
 vector
 -
+algorithm
+-
 matrix.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
 layer.hpp
@@ -82,7 +84,7 @@ math.h
 ../../include/utils/math.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
 
-/home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp
+/home/shawaiz-haider/OOP/EndSemProject/tests/backPropagation.cpp
 ../include/neuralNetwork.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
 ../include/matrix.hpp

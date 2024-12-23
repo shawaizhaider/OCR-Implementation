@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/shawaiz-haider/OOP/EndSemProject/src/neuralNetwork.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o"
   "/home/shawaiz-haider/OOP/EndSemProject/src/neuron.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o"
   "/home/shawaiz-haider/OOP/EndSemProject/src/utils/math.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o"
-  "/home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o"
+  "/home/shawaiz-haider/OOP/EndSemProject/tests/backPropagation.cpp" "/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

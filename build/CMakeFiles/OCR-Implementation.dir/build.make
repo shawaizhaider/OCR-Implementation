@@ -57,28 +57,28 @@ include CMakeFiles/OCR-Implementation.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/OCR-Implementation.dir/flags.make
 
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o: CMakeFiles/OCR-Implementation.dir/flags.make
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o: ../tests/feedForward.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o -c /home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: CMakeFiles/OCR-Implementation.dir/flags.make
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../tests/backPropagation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o -c /home/shawaiz-haider/OOP/EndSemProject/tests/backPropagation.cpp
 
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp > CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.i
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.i"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/shawaiz-haider/OOP/EndSemProject/tests/backPropagation.cpp > CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.i
 
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp -o CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.s
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.s"
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/shawaiz-haider/OOP/EndSemProject/tests/backPropagation.cpp -o CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.s
 
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.requires:
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.requires:
 
-.PHONY : CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.requires
+.PHONY : CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.requires
 
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.provides: CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.requires
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.provides.build
-.PHONY : CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.provides
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.provides: CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.provides.build
+.PHONY : CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.provides
 
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.provides.build: CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.provides.build: CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o
 
 
 CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o: CMakeFiles/OCR-Implementation.dir/flags.make
@@ -203,7 +203,7 @@ CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o.provides.build: CMakeFile
 
 # Object files for target OCR-Implementation
 OCR__Implementation_OBJECTS = \
-"CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o" \
+"CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o" \
 "CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o" \
 "CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o" \
 "CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o" \
@@ -213,7 +213,7 @@ OCR__Implementation_OBJECTS = \
 # External object files for target OCR-Implementation
 OCR__Implementation_EXTERNAL_OBJECTS =
 
-OCR-Implementation: CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o
+OCR-Implementation: CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o
 OCR-Implementation: CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o
 OCR-Implementation: CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o
 OCR-Implementation: CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o
@@ -229,7 +229,7 @@ CMakeFiles/OCR-Implementation.dir/build: OCR-Implementation
 
 .PHONY : CMakeFiles/OCR-Implementation.dir/build
 
-CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o.requires
+CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o.requires
 CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o.requires
 CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o.requires
 CMakeFiles/OCR-Implementation.dir/requires: CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o.requires

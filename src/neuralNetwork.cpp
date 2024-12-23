@@ -100,6 +100,99 @@ void neuralNetwork::feedForward() {
   }
 }
 
+void neuralNetwork::backPropagate(){
+    vector<Matrix* > updatedWeights;
+    Matrix* gradient;
+    int outputLayerIdx = this->numLayers - 1;
+    /*OtoH -> Output to Hidden*/
+    Matrix* differentiatedVals_OtoH = this->layers[outputLayerIdx]->convertDifferentiatedValsToMatrix();
+    Matrix* gradients_OtoH = new Matrix(1, this->layers[outputLayerIdx]->getNeurons().size(), false);
+    for(int i=0; i<this->errors.size(); i++){
+        double differentiatedVal = differentiatedVals_OtoH->getMatrixVal(0, i);
+        double errorVal = this->errors[i];
+        double gradientVal = differentiatedVal * errorVal;
+        gradients_OtoH->setMatrixVal(0, i, gradientVal);
+    }
+    /*Index Hidden Layer on the left of Output Layer*/
+    int hiddenLayerIdx = outputLayerIdx - 1;
+    /*Hidden Layer on the left of Output Layer*/
+    Layer* hiddenLayer = this->layers[hiddenLayerIdx];
+    Matrix* weightsOtoH = this->weightsMatrices[outputLayerIdx - 1];
+    /*Might need a fix here*/
+    Matrix* deltaOtoH = utils::Math::multiplyTwoMatrix(gradients_OtoH->transpose(), hiddenLayer->convertActivationValsToMatrix())->transpose();
+    Matrix* updatedWeightsOtoH = new Matrix(deltaOtoH->getNumRows(), deltaOtoH->getNumCols(), false);
+    for(int j=0; j<deltaOtoH->getNumRows(); j++){
+        for(int k=0; k<deltaOtoH->getNumCols(); k++){
+            double deltaWeightVal = deltaOtoH->getMatrixVal(j, k);
+            double weightVal = weightsOtoH->getMatrixVal(j, k);
+            updatedWeightsOtoH->setMatrixVal(j, k, weightVal - deltaWeightVal);
+        }
+    }
+    updatedWeights.push_back(updatedWeightsOtoH);
+    /*Make a copy of gradients_OtoH in gradient*/
+    gradient = new Matrix(gradients_OtoH->getNumRows(), gradients_OtoH->getNumCols(), false);
+    for(int i=0; i<gradients_OtoH->getNumRows(); i++){
+        for(int j=0; j<gradients_OtoH->getNumCols(); j++){
+            gradient->setMatrixVal(i, j, gradients_OtoH->getMatrixVal(i, j));
+        }
+    }
+    /*For Debugging
+    cout<<"Updated Weights between Hidden Layer and Output Layer"<<endl;
+    updatedWeightsOtoH->printMatrix();
+    */
+    // Hidden Layer to Input layer
+    for(int i=outputLayerIdx - 1; i > 0; i--){
+        Layer* currentLayer = this->layers[i];
+        /*Differentiated Values of the current layer, i.e., hidden layer.*/
+        Matrix* differentiatedVals = currentLayer->convertDifferentiatedValsToMatrix();
+        /*Activated Values of the current layer, i.e., hidden layer.*/
+        Matrix* activatedVals = currentLayer->convertActivationValsToMatrix();
+        /*Gradients of the current layer, i.e., hidden layer.*/
+        Matrix* differentiaredGradients = new Matrix(1, currentLayer->getNeurons().size(), false);
+        /*Weight matrix to the right of current hidden layer*/
+        Matrix* weightMatrix = this->weightsMatrices[i];
+        /*Weight matrix to the left of current hidden layer*/
+        Matrix* weightMatrixLeft = this->weightsMatrices[i - 1];
+
+        for(int i = 0; i < weightMatrix->getNumRows(); i++){
+            /*Sum of Products of gradient and Weight Matrix*/
+            double SOP = 0;
+            for(int j = 0; j < weightMatrix->getNumCols(); j++){
+                double product = gradient->getMatrixVal(0,j)*weightMatrix->getMatrixVal(i,j);
+                SOP += product;
+            }
+            double gradientVal = SOP * activatedVals->getMatrixVal(0,i);
+            differentiaredGradients->setMatrixVal(0, i, gradientVal);
+        }
+        Matrix* leftLayer = (i-1) == 0 ? this->layers[0]->convertValsToMatrix() : this->layers[i - 1]->convertActivationValsToMatrix();
+        /*Might need a fix here*/
+        Matrix* delta = utils::Math::multiplyTwoMatrix(differentiaredGradients->transpose(), leftLayer)->transpose();
+        Matrix* updatedWeightsHidden = new Matrix(delta->getNumRows(), delta->getNumCols(), false);
+        for(int i = 0; i < updatedWeightsHidden->getNumRows(); i++){
+            for(int j = 0; j < updatedWeightsHidden->getNumCols(); j++){
+                double deltaWeightVal = delta->getMatrixVal(i, j);
+                double origWeightVal = weightMatrixLeft->getMatrixVal(i, j);
+                updatedWeightsHidden->setMatrixVal(i, j, origWeightVal - deltaWeightVal);
+            }
+        }
+        updatedWeights.push_back(updatedWeightsHidden);
+        /*Make a copy of differentiaredGradients in gradient*/
+        gradient = new Matrix(differentiaredGradients->getNumRows(), differentiaredGradients->getNumCols(), false);
+        for(int i=0; i<differentiaredGradients->getNumRows(); i++){
+            for(int j=0; j<differentiaredGradients->getNumCols(); j++){
+                gradient->setMatrixVal(i, j, differentiaredGradients->getMatrixVal(i, j));
+            }
+        }
+    }
+    /*For Debugging
+    cout<<"Completed Back Propagation"<<endl;
+    cout << "Updated weights size: " << updatedWeights.size() << endl; 
+    cout << "Old Weights size: " << this->weightsMatrices.size() << endl;
+    */
+    reverse(updatedWeights.begin(), updatedWeights.end());
+    this->weightsMatrices = updatedWeights;
+}
+
 neuralNetwork::~neuralNetwork()
 {
     //TODO: Implement destructor

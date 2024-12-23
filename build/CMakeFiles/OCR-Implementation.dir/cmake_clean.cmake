@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o"
+  "CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o"
   "CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o"
   "CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o"
   "CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o"

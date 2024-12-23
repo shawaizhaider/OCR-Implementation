@@ -258,32 +258,32 @@ src/utils/math.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.s
 .PHONY : src/utils/math.cpp.s
 
-tests/feedForward.o: tests/feedForward.cpp.o
+tests/backPropagation.o: tests/backPropagation.cpp.o
 
-.PHONY : tests/feedForward.o
+.PHONY : tests/backPropagation.o
 
 # target to build an object file
-tests/feedForward.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o
-.PHONY : tests/feedForward.cpp.o
+tests/backPropagation.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o
+.PHONY : tests/backPropagation.cpp.o
 
-tests/feedForward.i: tests/feedForward.cpp.i
+tests/backPropagation.i: tests/backPropagation.cpp.i
 
-.PHONY : tests/feedForward.i
+.PHONY : tests/backPropagation.i
 
 # target to preprocess a source file
-tests/feedForward.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.i
-.PHONY : tests/feedForward.cpp.i
+tests/backPropagation.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.i
+.PHONY : tests/backPropagation.cpp.i
 
-tests/feedForward.s: tests/feedForward.cpp.s
+tests/backPropagation.s: tests/backPropagation.cpp.s
 
-.PHONY : tests/feedForward.s
+.PHONY : tests/backPropagation.s
 
 # target to generate assembly for a file
-tests/feedForward.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.s
-.PHONY : tests/feedForward.cpp.s
+tests/backPropagation.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.s
+.PHONY : tests/backPropagation.cpp.s
 
 # Help Target
 help:
@@ -309,9 +309,9 @@ help:
 	@echo "... src/utils/math.o"
 	@echo "... src/utils/math.i"
 	@echo "... src/utils/math.s"
-	@echo "... tests/feedForward.o"
-	@echo "... tests/feedForward.i"
-	@echo "... tests/feedForward.s"
+	@echo "... tests/backPropagation.o"
+	@echo "... tests/backPropagation.i"
+	@echo "... tests/backPropagation.s"
 .PHONY : help
 
 

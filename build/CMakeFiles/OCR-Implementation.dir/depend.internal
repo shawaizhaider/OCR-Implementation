@@ -25,9 +25,9 @@ CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
  /home/shawaiz-haider/OOP/EndSemProject/src/utils/math.cpp
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o
  /home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
- /home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp
+ /home/shawaiz-haider/OOP/EndSemProject/tests/backPropagation.cpp

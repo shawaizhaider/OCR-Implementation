@@ -25,9 +25,9 @@ CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o: ../include/neuron.hpp
 CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o: ../include/utils/math.hpp
 CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o: ../src/utils/math.cpp
 
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o: ../include/layer.hpp
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o: ../include/matrix.hpp
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o: ../include/neuralNetwork.hpp
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o: ../include/neuron.hpp
-CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o: ../tests/feedForward.cpp
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/layer.hpp
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/matrix.hpp
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/neuralNetwork.hpp
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/neuron.hpp
+CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../tests/backPropagation.cpp
 

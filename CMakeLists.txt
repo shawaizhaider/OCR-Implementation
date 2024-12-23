@@ -15,7 +15,8 @@ add_executable(
     #tests/matrix.cpp
     #tests/neuron.cpp
     #tests/nn.cpp
-    tests/feedForward.cpp
+    #tests/feedForward.cpp
+    tests/backPropagation.cpp
     src/neuron.cpp
     src/layer.cpp
     src/matrix.cpp

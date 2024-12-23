@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include "matrix.hpp"
 #include "layer.hpp"
 
@@ -21,6 +22,7 @@ class neuralNetwork{
         int numLayers;
         vector<double> inputVals;
         vector<Matrix*> weightsMatrices;
+        vector<Matrix*> gradients;
         vector<Layer*> layers;
         vector<double> input;
         /*Errors of model or differences*/
@@ -33,7 +35,7 @@ class neuralNetwork{
         void setCurrentInput(vector<double> inputVals);
         void printNetwork();
         void feedForward();
-
+        void backPropagate();
         Matrix* getNeuronMatrix(int index){return this->layers[index]->convertValsToMatrix();}
         Matrix* getActivationMatrix(int index){return this->layers[index]->convertActivationValsToMatrix();}
         Matrix* getDifferentiatedMatrix(int index){return this->layers[index]->convertDifferentiatedValsToMatrix();}
