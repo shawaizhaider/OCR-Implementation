@@ -46,6 +46,14 @@ int main()
     cout<<"Total Error: "<<nn->getTotalError()<<endl;
     nn->backPropagate();
     }
+    cout<<"*************************************"<<endl;
+    /*Predicted Output*/
+    nn->printOutput();
+    cout<<"*************************************"<<endl;
+    /*Target Output*/
+    nn->printTargets();
+    /*Iteration Errors*/
+    nn->printiterationErrors();
 
 
     return 0;

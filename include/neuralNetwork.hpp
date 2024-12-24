@@ -45,6 +45,10 @@ class neuralNetwork{
         vector<double> getErrors(){return this->errors;};
         void setTargets(vector<double> targets){this->targets = targets;}
         void setErrors();
+        void printInput();
+        void printOutput();
+        void printTargets();
+        void printiterationErrors();
         ~neuralNetwork();
 };
 

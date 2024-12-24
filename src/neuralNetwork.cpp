@@ -68,8 +68,9 @@ void neuralNetwork::setErrors(){
     for(int i = 0; i < outputNeurons.size(); i++){
         double diff = outputNeurons[i]->getNeuronActivation() - this->targets[i];
         this->errors[i] = diff;
-        this->globalError += diff;   
+        this->globalError += pow(diff,2);   
     }
+    this->globalError = this->globalError / 2;
     iterationErrors.push_back(this->globalError);
 }
 
@@ -191,6 +192,42 @@ void neuralNetwork::backPropagate(){
     */
     reverse(updatedWeights.begin(), updatedWeights.end());
     this->weightsMatrices = updatedWeights;
+}
+
+void neuralNetwork::printInput()
+{
+    cout << "Input Values" << endl;
+    for(int i = 0; i < this->inputVals.size(); i++)
+    {
+        cout << this->inputVals[i] << "   ";
+    }
+    cout << endl;
+}
+
+void neuralNetwork::printOutput(){
+    int idxOutputLayer = this->numLayers - 1;
+    Matrix* activatedOutputMatrix = this->layers[idxOutputLayer]->convertActivationValsToMatrix();
+    cout << "Output Values" << endl;
+    for(int i = 0; i < activatedOutputMatrix->getNumCols(); i++){
+        cout << activatedOutputMatrix->getMatrixVal(0, i) << "   ";
+    }
+    cout << endl;
+}
+
+void neuralNetwork::printTargets(){
+    cout << "Target Values" << endl;
+    for(int i = 0; i < this->targets.size(); i++){
+        cout << this->targets[i] << "   ";
+    }
+    cout << endl;
+}
+
+void neuralNetwork::printiterationErrors(){
+    cout << "Iteration Errors" << endl;
+    for(int i = 0; i < this->iterationErrors.size(); i++){
+        cout << this->iterationErrors[i] << "   ";
+    }
+    cout << endl;
 }
 
 neuralNetwork::~neuralNetwork()
