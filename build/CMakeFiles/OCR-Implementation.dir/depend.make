@@ -10,24 +10,41 @@ CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o: ../include/matrix.hpp
 CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o: ../include/neuron.hpp
 CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o: ../src/matrix.cpp
 
+CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../include/json.hpp
 CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../include/layer.hpp
 CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../include/matrix.hpp
 CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../include/neuralNetwork.hpp
 CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../include/neuron.hpp
 CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../include/utils/math.hpp
+CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../include/utils/read_csv.hpp
 CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o: ../src/neuralNetwork.cpp
 
 CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o: ../include/neuron.hpp
 CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o: ../src/neuron.cpp
+
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../include/json.hpp
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../include/layer.hpp
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../include/matrix.hpp
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../include/neuralNetwork.hpp
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../include/neuron.hpp
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../include/utils/math.hpp
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../include/utils/read_csv.hpp
+CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o: ../src/saving_model.cpp
 
 CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o: ../include/matrix.hpp
 CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o: ../include/neuron.hpp
 CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o: ../include/utils/math.hpp
 CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o: ../src/utils/math.cpp
 
-CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/layer.hpp
-CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/matrix.hpp
-CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/neuralNetwork.hpp
-CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../include/neuron.hpp
-CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o: ../tests/backPropagation.cpp
+CMakeFiles/OCR-Implementation.dir/src/utils/read_csv.cpp.o: ../include/utils/read_csv.hpp
+CMakeFiles/OCR-Implementation.dir/src/utils/read_csv.cpp.o: ../src/utils/read_csv.cpp
+
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../include/json.hpp
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../include/layer.hpp
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../include/matrix.hpp
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../include/neuralNetwork.hpp
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../include/neuron.hpp
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../include/utils/math.hpp
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../include/utils/read_csv.hpp
+CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o: ../tests/train_using_config.cpp
 

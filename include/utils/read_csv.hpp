@@ -1,5 +1,5 @@
-#ifndef _MISC_HPP_
-#define _MISC_HPP_
+#ifndef READ_CSV_HPP
+#define READ_CSV_HPP
 
 #include <iostream>
 #include <vector>
@@ -9,13 +9,13 @@
 
 using namespace std;
 
-namespace utils
+namespace readData
 {
-  class Misc
+  class readCSV
   {
   public:
     static vector< vector<double> > fetchData(string path);
   };
 }
 
-#endif
+#endif // READ_CSV_HPP

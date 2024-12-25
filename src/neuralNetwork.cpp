@@ -35,17 +35,27 @@ void neuralNetwork::printNetwork()
     for(int i = 0; i < this->numLayers; i++)
     {
         cout << "Layer " << i << endl;
+
+        Matrix* valsMatrix = this->layers[i]->convertValsToMatrix();
         cout << "Neuron Values" << endl;
-        this->layers[i]->convertValsToMatrix()->printMatrix();
+        valsMatrix->printMatrix();
+        delete valsMatrix;
+
+        Matrix* actMatrix = this->layers[i]->convertActivationValsToMatrix();
         cout << "Neuron Activation Values" << endl;
-        this->layers[i]->convertActivationValsToMatrix()->printMatrix();
+        actMatrix->printMatrix();
+        delete actMatrix;
+
+        Matrix* diffMatrix = this->layers[i]->convertDifferentiatedValsToMatrix();
         cout << "Neuron Differentiated Values" << endl;
-        this->layers[i]->convertDifferentiatedValsToMatrix()->printMatrix();
+        diffMatrix->printMatrix();
+        delete diffMatrix;
+
         if(i<this->numLayers-1)
         {
             cout<<"\t\t**************************************"<<endl;
             cout<<"Weights Matrix between Layer "<<i<<" and Layer "<<i+1<<endl;
-            weightsMatrices[i]->printMatrix();
+            this->weightsMatrices[i]->printMatrix();
             cout<<"\t\t**************************************"<<endl;
         }
     }
@@ -76,34 +86,23 @@ void neuralNetwork::setErrors(){
 
 void neuralNetwork::feedForward() {
     // TODO: Fix Memory Leaks and add biases
-  Matrix *a;  // Matrix of neurons to the left
-  Matrix *b;  // Matrix of weights to the right of layer
-  Matrix *c;  // Matrix of neurons to the next layer
+    for(int i = 0; i < (this->numLayers - 1); i++) {
+        Matrix* a = (i == 0) ? this->getNeuronMatrix(i) : this->getActivationMatrix(i);
+        Matrix* b = this->getWeightMatrix(i);
+        Matrix* c = new Matrix(a->getNumRows(), b->getNumCols(), false);
 
-  for(int i = 0; i < (this->numLayers - 1); i++) {
-    a = this->getNeuronMatrix(i);
-    b = this->getWeightMatrix(i);
-    c = new Matrix(
-          a->getNumRows(),
-          b->getNumCols(),
-          false
-        );
-
-    if(i != 0) {
-      a = this->getActivationMatrix(i);
+        utils::Math::multiplyMatrix(a, b, c);
+        for(int c_index = 0; c_index < c->getNumCols(); c_index++) {
+            this->setNeuronVal(i + 1, c_index, c->getMatrixVal(0, c_index));
+        }
+        delete a;
+        delete c;
     }
-
-    utils::Math::multiplyMatrix(a, b, c);
-
-    for(int c_index = 0; c_index < c->getNumCols(); c_index++) {
-      this->setNeuronVal(i + 1, c_index, c->getMatrixVal(0, c_index) /* + this->bias*/);
-    }
-  }
 }
 
 void neuralNetwork::backPropagate(){
     vector<Matrix* > updatedWeights;
-    Matrix* gradient;
+    Matrix* gradient = nullptr;
     int outputLayerIdx = this->numLayers - 1;
     /*OtoH -> Output to Hidden*/
     Matrix* differentiatedVals_OtoH = this->layers[outputLayerIdx]->convertDifferentiatedValsToMatrix();
@@ -131,6 +130,7 @@ void neuralNetwork::backPropagate(){
     }
     updatedWeights.push_back(updatedWeightsOtoH);
     /*Make a copy of gradients_OtoH in gradient*/
+    if (gradient) delete gradient;
     gradient = new Matrix(gradients_OtoH->getNumRows(), gradients_OtoH->getNumCols(), false);
     for(int i=0; i<gradients_OtoH->getNumRows(); i++){
         for(int j=0; j<gradients_OtoH->getNumCols(); j++){
@@ -178,6 +178,7 @@ void neuralNetwork::backPropagate(){
         }
         updatedWeights.push_back(updatedWeightsHidden);
         /*Make a copy of differentiaredGradients in gradient*/
+        if (gradient) delete gradient;
         gradient = new Matrix(differentiaredGradients->getNumRows(), differentiaredGradients->getNumCols(), false);
         for(int i=0; i<differentiaredGradients->getNumRows(); i++){
             for(int j=0; j<differentiaredGradients->getNumCols(); j++){
@@ -191,6 +192,10 @@ void neuralNetwork::backPropagate(){
     cout << "Old Weights size: " << this->weightsMatrices.size() << endl;
     */
     reverse(updatedWeights.begin(), updatedWeights.end());
+    for (auto oldW : this->weightsMatrices) {
+        delete oldW;
+    }
+    this->weightsMatrices.clear();
     this->weightsMatrices = updatedWeights;
 }
 
@@ -232,5 +237,10 @@ void neuralNetwork::printiterationErrors(){
 
 neuralNetwork::~neuralNetwork()
 {
-    //TODO: Implement destructor
+    for (auto w : this->weightsMatrices) {
+        delete w;
+    }
+    for (auto l : this->layers) {
+        delete l;
+    }
 }

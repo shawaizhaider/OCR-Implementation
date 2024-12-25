@@ -1,0 +1,10 @@
+{
+    "topology": [3,2,2],
+    "learningRate": 1.0,
+    "momentum": 1.0,
+    "maxEpochs": 1000,
+    "trainingSet": "/home/shawaiz-haider/OOP/EndSemProject/data/exampleData.csv",
+    "labelsFile": "/home/shawaiz-haider/OOP/EndSemProject/data/exampleLabels.csv",
+    "weightsFile": "/home/shawaiz-haider/OOP/EndSemProject/data/weights.json"
+
+}

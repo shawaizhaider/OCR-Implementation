@@ -231,6 +231,33 @@ src/neuron.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.s
 .PHONY : src/neuron.cpp.s
 
+src/saving_model.o: src/saving_model.cpp.o
+
+.PHONY : src/saving_model.o
+
+# target to build an object file
+src/saving_model.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.o
+.PHONY : src/saving_model.cpp.o
+
+src/saving_model.i: src/saving_model.cpp.i
+
+.PHONY : src/saving_model.i
+
+# target to preprocess a source file
+src/saving_model.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.i
+.PHONY : src/saving_model.cpp.i
+
+src/saving_model.s: src/saving_model.cpp.s
+
+.PHONY : src/saving_model.s
+
+# target to generate assembly for a file
+src/saving_model.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/saving_model.cpp.s
+.PHONY : src/saving_model.cpp.s
+
 src/utils/math.o: src/utils/math.cpp.o
 
 .PHONY : src/utils/math.o
@@ -258,32 +285,59 @@ src/utils/math.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.s
 .PHONY : src/utils/math.cpp.s
 
-tests/backPropagation.o: tests/backPropagation.cpp.o
+src/utils/read_csv.o: src/utils/read_csv.cpp.o
 
-.PHONY : tests/backPropagation.o
+.PHONY : src/utils/read_csv.o
 
 # target to build an object file
-tests/backPropagation.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.o
-.PHONY : tests/backPropagation.cpp.o
+src/utils/read_csv.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/read_csv.cpp.o
+.PHONY : src/utils/read_csv.cpp.o
 
-tests/backPropagation.i: tests/backPropagation.cpp.i
+src/utils/read_csv.i: src/utils/read_csv.cpp.i
 
-.PHONY : tests/backPropagation.i
+.PHONY : src/utils/read_csv.i
 
 # target to preprocess a source file
-tests/backPropagation.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.i
-.PHONY : tests/backPropagation.cpp.i
+src/utils/read_csv.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/read_csv.cpp.i
+.PHONY : src/utils/read_csv.cpp.i
 
-tests/backPropagation.s: tests/backPropagation.cpp.s
+src/utils/read_csv.s: src/utils/read_csv.cpp.s
 
-.PHONY : tests/backPropagation.s
+.PHONY : src/utils/read_csv.s
 
 # target to generate assembly for a file
-tests/backPropagation.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/backPropagation.cpp.s
-.PHONY : tests/backPropagation.cpp.s
+src/utils/read_csv.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/read_csv.cpp.s
+.PHONY : src/utils/read_csv.cpp.s
+
+tests/train_using_config.o: tests/train_using_config.cpp.o
+
+.PHONY : tests/train_using_config.o
+
+# target to build an object file
+tests/train_using_config.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.o
+.PHONY : tests/train_using_config.cpp.o
+
+tests/train_using_config.i: tests/train_using_config.cpp.i
+
+.PHONY : tests/train_using_config.i
+
+# target to preprocess a source file
+tests/train_using_config.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.i
+.PHONY : tests/train_using_config.cpp.i
+
+tests/train_using_config.s: tests/train_using_config.cpp.s
+
+.PHONY : tests/train_using_config.s
+
+# target to generate assembly for a file
+tests/train_using_config.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/train_using_config.cpp.s
+.PHONY : tests/train_using_config.cpp.s
 
 # Help Target
 help:
@@ -306,12 +360,18 @@ help:
 	@echo "... src/neuron.o"
 	@echo "... src/neuron.i"
 	@echo "... src/neuron.s"
+	@echo "... src/saving_model.o"
+	@echo "... src/saving_model.i"
+	@echo "... src/saving_model.s"
 	@echo "... src/utils/math.o"
 	@echo "... src/utils/math.i"
 	@echo "... src/utils/math.s"
-	@echo "... tests/backPropagation.o"
-	@echo "... tests/backPropagation.i"
-	@echo "... tests/backPropagation.s"
+	@echo "... src/utils/read_csv.o"
+	@echo "... src/utils/read_csv.i"
+	@echo "... src/utils/read_csv.s"
+	@echo "... tests/train_using_config.o"
+	@echo "... tests/train_using_config.i"
+	@echo "... tests/train_using_config.s"
 .PHONY : help
 
 

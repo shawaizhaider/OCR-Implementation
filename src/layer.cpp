@@ -44,9 +44,8 @@ Matrix* Layer::convertDifferentiatedValsToMatrix()
 }
 Layer::~Layer()
 {
-    //TODO: Implement destructor
-    // for(int i = 0; i < this->layerSize; i++)
-    // {
-    //     delete this->neurons[i];
-    // }
+    for(int i = 0; i < this->layerSize; i++)
+    {
+        delete this->neurons[i];
+    }
 }
