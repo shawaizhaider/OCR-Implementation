@@ -16,10 +16,13 @@ add_executable(
     #tests/neuron.cpp
     #tests/nn.cpp
     #tests/feedForward.cpp
-    tests/backPropagation.cpp
-    src/neuron.cpp
+    # tests/backPropagation.cpp
+    tests/train_using_config.cpp
+    src/neuron.cpp  
     src/layer.cpp
     src/matrix.cpp
     src/neuralNetwork.cpp
+    src/saving_model.cpp
     src/utils/math.cpp
+    src/utils/read_csv.cpp
 )
