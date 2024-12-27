@@ -49,7 +49,31 @@ int main(int argc, char** argv){
     vector< vector<double>> trainingData = readData::readCSV::fetchData(trainingFile);
     vector< vector<double>> labels = readData::readCSV::fetchData(labelsFile);
 
+    cout << "Training samples: " << trainingData.size() 
+         << ", Features per sample: " 
+         << (trainingData.empty() ? 0 : trainingData[0].size()) << endl;
+    cout << "Label samples: " << labels.size() 
+         << ", Values per label: " 
+         << (labels.empty() ? 0 : labels[0].size()) << endl;
 
+    // Basic checks for row sizes
+    for (int i = 0; i < trainingData.size(); i++) {
+        if (trainingData[i].size() != 3) {
+            cerr << "Error: trainingData row " << i << " has size "
+                 << trainingData[i].size() << " instead of 3." << endl;
+            return 1;
+        }
+        if (labels[i].size() != 2) {
+            cerr << "Error: labels row " << i << " has size "
+                 << labels[i].size() << " instead of 2." << endl;
+            return 1;
+        }
+    }
+
+    if(trainingData.size() != labels.size()) {
+        cerr << "Mismatch in rows of trainingData and labels." << endl;
+        return 1;
+    }
 
     for(int i = 0; i < maxEpochs; i++){
         for(int j = 0; j < trainingData.size(); j++){

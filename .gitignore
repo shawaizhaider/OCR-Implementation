@@ -38,6 +38,6 @@ coverage/
 *.rar
 *.log
 *.log.*
-#CMakeCache.txt
-#CMakeFiles/
-#*.cmake
+CMakeCache.txt
+CMakeFiles/
+*.cmake

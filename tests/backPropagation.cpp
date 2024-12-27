@@ -8,11 +8,11 @@ using namespace std;
 
 int main()
 {
-    #ifdef _WIN32
-        system("cls");
-    #else
-    system("clear");
-    #endif
+    // #ifdef _WIN32
+    //     system("cls");
+    // #else
+    // system("clear");
+    // #endif
     /* 
     vector<int> topology = {3, 2, 1};
     vector<double> inputVals = {1.0, 0.0,1.0};
@@ -54,6 +54,8 @@ int main()
     nn->printTargets();
     /*Iteration Errors*/
     nn->printiterationErrors();
+    cout<<"*************************************"<<endl;
+    nn->printNetwork();
 
 
     return 0;
