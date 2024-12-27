@@ -60,39 +60,76 @@ CMAKE_SOURCE_DIR = /home/shawaiz-haider/OOP/EndSemProject
 CMAKE_BINARY_DIR = /home/shawaiz-haider/OOP/EndSemProject/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/OCR-Implementation.dir
+# Target rules for target CMakeFiles/predict.dir
 
 # All Build rule for target.
-CMakeFiles/OCR-Implementation.dir/all:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/depend
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target OCR-Implementation"
-.PHONY : CMakeFiles/OCR-Implementation.dir/all
+CMakeFiles/predict.dir/all:
+	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/depend
+	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target predict"
+.PHONY : CMakeFiles/predict.dir/all
 
 # Include target in all.
-all: CMakeFiles/OCR-Implementation.dir/all
+all: CMakeFiles/predict.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/OCR-Implementation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OCR-Implementation.dir/all
+CMakeFiles/predict.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/predict.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 0
-.PHONY : CMakeFiles/OCR-Implementation.dir/rule
+.PHONY : CMakeFiles/predict.dir/rule
 
 # Convenience name for target.
-OCR-Implementation: CMakeFiles/OCR-Implementation.dir/rule
+predict: CMakeFiles/predict.dir/rule
 
-.PHONY : OCR-Implementation
-
-# clean rule for target.
-CMakeFiles/OCR-Implementation.dir/clean:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/clean
-.PHONY : CMakeFiles/OCR-Implementation.dir/clean
+.PHONY : predict
 
 # clean rule for target.
-clean: CMakeFiles/OCR-Implementation.dir/clean
+CMakeFiles/predict.dir/clean:
+	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/clean
+.PHONY : CMakeFiles/predict.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/predict.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/train-model.dir
+
+# All Build rule for target.
+CMakeFiles/train-model.dir/all:
+	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/depend
+	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20 "Built target train-model"
+.PHONY : CMakeFiles/train-model.dir/all
+
+# Include target in all.
+all: CMakeFiles/train-model.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/train-model.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 10
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/train-model.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 0
+.PHONY : CMakeFiles/train-model.dir/rule
+
+# Convenience name for target.
+train-model: CMakeFiles/train-model.dir/rule
+
+.PHONY : train-model
+
+# clean rule for target.
+CMakeFiles/train-model.dir/clean:
+	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/clean
+.PHONY : CMakeFiles/train-model.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/train-model.dir/clean
 
 .PHONY : clean
 

@@ -22,7 +22,7 @@ neuralNetwork::neuralNetwork(vector<int> topology)
         this->weightsMatrices.push_back(weightMatrix);
     }
 
-    // Initialize biases for all neurons (except input layer)
+    // Initializing biases for all neurons (except input layer since it doesn't have biases)
     for(int i = 1; i < this->numLayers; i++){
         for(int j = 0; j < this->topology[i]; j++){
             this->biases.push_back(0.0); 
@@ -69,7 +69,7 @@ neuralNetwork::neuralNetwork(NNConfig config)
         differentiatedErrors.push_back(0.0);
     }
 
-    // Initialize biases for all neurons (except input layer)
+    // Initializing biases for all neurons (except input layer since it doesn't have biases)
     for(int i = 1; i < this->numLayers; i++){
         for(int j = 0; j < this->topology[i]; j++){
             this->biases.push_back(0.0); 
@@ -88,7 +88,6 @@ void neuralNetwork::setCurrentInput(vector<double> inputVals)
 }
 
 int neuralNetwork::getBiasIndex(int layerIndex, int neuronIndex){
-    // Accumulate size of each layer from 1 up to layerIndex (ignoring input layer)
     int offset = 0;
     for(int i=1; i<layerIndex; i++){
         offset += this->topology[i];
@@ -152,6 +151,9 @@ void neuralNetwork::setErrors(){
     int outputLayerIdx = this->numLayers - 1;
     vector<Neuron*> outputNeurons = this->layers[outputLayerIdx]->getNeurons();
     this->errors.resize(outputNeurons.size()); // so that errors can store each neuron’s error
+
+    /*Modified the implementation of cost function */
+
     // for(int i = 0; i < outputNeurons.size(); i++){
     //     double diff = outputNeurons[i]->getNeuronActivation() - this->targets[i];
     //     this->errors[i] = diff;
@@ -160,6 +162,7 @@ void neuralNetwork::setErrors(){
     //     this->globalError += pow(diff,2);   
     // }
     // this->globalError = this->globalError / 2;
+
     for(int i = 0; i < outputNeurons.size(); i++){
         double diff = outputNeurons[i]->getNeuronActivation() - this->targets[i];
         this->errors[i] = 0.5 * pow(abs(diff), 2);
@@ -171,6 +174,7 @@ void neuralNetwork::setErrors(){
 
 void neuralNetwork::feedForward() {
     // TODO: Fix Memory Leaks and add biases
+    /*Update: Added biases and fixed memory leaks to some extent*/
     for(int i = 0; i < (this->numLayers - 1); i++) {
         Matrix* a = (i == 0) ? this->getNeuronMatrix(i) : this->getActivationMatrix(i);
         Matrix* b = this->getWeightMatrix(i);
@@ -178,7 +182,7 @@ void neuralNetwork::feedForward() {
 
         utils::Math::multiplyMatrix(a, b, c);
         for(int c_index = 0; c_index < c->getNumCols(); c_index++) {
-            // Add bias
+            // Adding bias
             int biasIdx = getBiasIndex(i+1, c_index);
             double netVal = c->getMatrixVal(0, c_index) + this->biases[biasIdx];
             this->setNeuronVal(i + 1, c_index, netVal);
@@ -190,24 +194,24 @@ void neuralNetwork::feedForward() {
 
 void neuralNetwork::backPropagate()
 {
-    // PART 1: Output Layer
+    // For Output Layer
     int outputLayerIdx = this->numLayers - 1;
     Matrix* derivedVals = this->layers[outputLayerIdx]->convertDifferentiatedValsToMatrix();
     Matrix* gradients = new Matrix(1, this->topology[outputLayerIdx], false);
-    // Compute gradients for output layer using differentiatedErrors
+    /* Computing gradients for output layer using differentiatedErrors */
     for(int i = 0; i < this->topology[outputLayerIdx]; i++){
         double e = this->differentiatedErrors[i];
         double dVal = derivedVals->getMatrixVal(0, i);
         gradients->setMatrixVal(0, i, e * dVal);
     }
 
-    // (Output) deltaWeights = gradientsᵀ * activatedVals
+    // deltaWeights = gradientsᵀ * activatedVals
     Matrix* gradT = gradients->transpose();
     Matrix* activatedVals = this->layers[outputLayerIdx - 1]->convertActivationValsToMatrix();
     Matrix* deltaWeights = new Matrix(gradT->getNumRows(), activatedVals->getNumCols(), false);
     utils::Math::multiplyMatrix(gradT, activatedVals, deltaWeights);
 
-    // Update last hidden->output weights
+    // last hidden layer->output layer weights
     Matrix* newWeightMat = new Matrix(this->topology[outputLayerIdx - 1], this->topology[outputLayerIdx], false);
     for(int r = 0; r < newWeightMat->getNumRows(); r++){
         for(int c = 0; c < newWeightMat->getNumCols(); c++){
@@ -219,24 +223,23 @@ void neuralNetwork::backPropagate()
         }
     }
 
-    // Update biases for output layer
+    // Updating weights and biases for output layer
     for(int i = 0; i < this->topology[outputLayerIdx]; i++){
         double gradVal = gradients->getMatrixVal(0, i);
         int biasIdx = getBiasIndex(outputLayerIdx, i);
         this->biases[biasIdx] = (this->biases[biasIdx] * this->momentum) - (this->learning_rate * gradVal);
     }
-
     vector<Matrix*> updatedWeights;
     updatedWeights.push_back(new Matrix(*newWeightMat));
 
-    // Clean up
+    // Memory cleanup
     delete derivedVals; 
     delete gradT;
     delete activatedVals;
     delete deltaWeights;
     delete newWeightMat;
 
-    // PART 2: Propagate backwards through hidden layers
+    //Propagating backwards through hidden layers
     for(int layerIdx = outputLayerIdx - 1; layerIdx > 0; layerIdx--){
         // Copy old gradients
         Matrix* pGradients = new Matrix(*gradients);
@@ -277,7 +280,7 @@ void neuralNetwork::backPropagate()
             }
         }
 
-        // Update biases
+        // Updating biases
         for(int neuron = 0; neuron < this->topology[layerIdx]; neuron++){
             double gradVal = gradients->getMatrixVal(0, neuron);
             int bIdx = getBiasIndex(layerIdx, neuron);
@@ -286,7 +289,7 @@ void neuralNetwork::backPropagate()
 
         updatedWeights.push_back(new Matrix(*tempWeights));
 
-        // Clean up
+        // Memory Cleanup
         delete pGradients;
         delete nextLayerWT;
         delete derivMatrix;
@@ -297,7 +300,7 @@ void neuralNetwork::backPropagate()
     }
     delete gradients;
 
-    // Replace old weights with updated weights
+    // Updating old weights
     for (auto oldW : this->weightsMatrices) delete oldW;
     this->weightsMatrices.clear();
     reverse(updatedWeights.begin(), updatedWeights.end());

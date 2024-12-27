@@ -1,1 +1,2 @@
-/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir
+/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/predict.dir
+/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/train-model.dir

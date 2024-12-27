@@ -40,5 +40,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/OCR-Implementation.dir/DependInfo.cmake"
+  "CMakeFiles/predict.dir/DependInfo.cmake"
+  "CMakeFiles/train-model.dir/DependInfo.cmake"
   )

@@ -60,7 +60,8 @@ class neuralNetwork{
         vector<double> targets;
         double learning_rate = 1;
         double momentum = 1;
-        vector<double> biases; 
+        vector<double> biases;
+        vector<vector<double>> biasesVector;
         NNConfig config;
         ActivationFunction hiddenActivationFunction;
         ActivationFunction outputActivationFunction;
@@ -98,6 +99,7 @@ class neuralNetwork{
         void loadModel(string file);
         void setBias(int index, double val){ this->biases[index] = val; }
         double getBias(int index){ return this->biases[index]; }
+        double getGlobalError(){ return this->globalError; }  
         ~neuralNetwork();
 };
 
