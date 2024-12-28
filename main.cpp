@@ -11,12 +11,12 @@ int main()
     // Initialization
     const int screenWidth = 1000;
     const int screenHeight = 800;
-    InitWindow(screenWidth, screenHeight, "Image to Text Converter");
+    InitWindow(screenWidth, screenHeight, "OCR Implementation in C++");
     Color greengrey = {155, 168, 171, 255};
 
     // Logo title settings
-    const char *titleText = "Image to Text Converter";
-    const int titleFontSize = 60;  
+    const char *titleText = "OCR Implementation in C++";
+    const int titleFontSize = 60;
     const int titlePositionX = screenWidth / 2 - MeasureText(titleText, titleFontSize) / 2;
     const int titlePositionY = screenHeight / 4;
 
@@ -166,6 +166,31 @@ int main()
 
                 // Draw the image with scaling
                 DrawTextureEx(texture, (Vector2){(float)posX, (float)posY}, 0.0f, scale, WHITE);
+                
+                // Add "Convert" and "Change Image" buttons
+                Rectangle convertButton = {screenWidth - buttonWidth - 50, screenHeight - buttonHeight - 50, buttonWidth, buttonHeight};
+                Rectangle changeImageButton = {50, screenHeight - buttonHeight - 50, buttonWidth, buttonHeight};
+
+                if (GuiButton(convertButton, "Convert"))
+                {
+                    // Add conversion functionality here
+                }
+
+                if (GuiButton(changeImageButton, "Change Image"))
+                {
+                    // Discard the loaded image, reset file paths, and return to the file drop screen
+                    UnloadImage(loadedImage);
+                    UnloadTexture(texture);
+                    imageLoaded = false;
+
+                    filePathCounter = 0;
+                    for (int i = 0; i < MAX_FILEPATH_RECORDED; i++)
+                    {
+                        memset(filePaths[i], 0, MAX_FILEPATH_SIZE); // Clear stored file paths
+                    }
+
+                    uploadMode = true;
+                }
             }
         }
 
