@@ -3,6 +3,8 @@ Scratch Implementation of OCR in C++.
 
 # Project Structure
 
+```
+
 📦EndSemProject
  ┣ 📂build
  ┣ 📂config
@@ -68,3 +70,5 @@ Scratch Implementation of OCR in C++.
  ┣ 📜CMakeLists.txt
  ┣ 📜LICENSE
  ┗ 📜README.md
+
+ ```
