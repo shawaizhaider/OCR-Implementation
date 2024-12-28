@@ -2,7 +2,7 @@
 Scratch Implementation of OCR in C++.
 
 # Project Structure
-
+'''
 ├── CMakeLists.txt
 ├── config
 │   ├── eval_config.json
@@ -65,3 +65,4 @@ Scratch Implementation of OCR in C++.
     │   └── hand_written2.jpeg
     ├── train_model.cpp
     └── train_using_config.cpp
+'''
