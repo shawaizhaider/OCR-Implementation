@@ -19,6 +19,7 @@ class Matrix{
         void setMatrixVal(int rowIndex, int colIndex, double val){this->matrixVals[rowIndex][colIndex] = val;}
         // getters
         double getMatrixVal(int rowIndex, int colIndex){return this->matrixVals[rowIndex][colIndex];}
+        vector<vector<double>> getMatrixVals(){return this->matrixVals;}
         double generateRandomVal();
 
         int getNumRows(){return this->numRows;}

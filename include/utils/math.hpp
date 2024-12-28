@@ -16,6 +16,7 @@ namespace utils
   {
   public:
     static void multiplyMatrix(Matrix *a, Matrix *b, Matrix *c);
+    static Matrix *multiplyTwoMatrix(Matrix *a, Matrix *b);
   };
 }
 

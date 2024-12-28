@@ -1,1 +1,1 @@
-/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR-Implementation.dir
+/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles/OCR_with_GUI.dir

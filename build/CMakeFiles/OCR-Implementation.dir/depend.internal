@@ -11,11 +11,13 @@ CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
  /home/shawaiz-haider/OOP/EndSemProject/src/matrix.cpp
 CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o
+ /home/shawaiz-haider/OOP/EndSemProject/include/json.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/utils/read_csv.hpp
  /home/shawaiz-haider/OOP/EndSemProject/src/neuralNetwork.cpp
 CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
@@ -26,8 +28,11 @@ CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o
  /home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
  /home/shawaiz-haider/OOP/EndSemProject/src/utils/math.cpp
 CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o
+ /home/shawaiz-haider/OOP/EndSemProject/include/json.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/layer.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
  /home/shawaiz-haider/OOP/EndSemProject/include/neuron.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
+ /home/shawaiz-haider/OOP/EndSemProject/include/utils/read_csv.hpp
  /home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp

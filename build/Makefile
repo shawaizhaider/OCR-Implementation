@@ -111,179 +111,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OCR-Implementation
+# Target rules for targets named OCR_with_GUI
 
 # Build rule for target.
-OCR-Implementation: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 OCR-Implementation
-.PHONY : OCR-Implementation
+OCR_with_GUI: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 OCR_with_GUI
+.PHONY : OCR_with_GUI
 
 # fast build rule for target.
-OCR-Implementation/fast:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/build
-.PHONY : OCR-Implementation/fast
+OCR_with_GUI/fast:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/build
+.PHONY : OCR_with_GUI/fast
 
-src/layer.o: src/layer.cpp.o
+src/GUI/interface.o: src/GUI/interface.cpp.o
 
-.PHONY : src/layer.o
-
-# target to build an object file
-src/layer.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.o
-.PHONY : src/layer.cpp.o
-
-src/layer.i: src/layer.cpp.i
-
-.PHONY : src/layer.i
-
-# target to preprocess a source file
-src/layer.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.i
-.PHONY : src/layer.cpp.i
-
-src/layer.s: src/layer.cpp.s
-
-.PHONY : src/layer.s
-
-# target to generate assembly for a file
-src/layer.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/layer.cpp.s
-.PHONY : src/layer.cpp.s
-
-src/matrix.o: src/matrix.cpp.o
-
-.PHONY : src/matrix.o
+.PHONY : src/GUI/interface.o
 
 # target to build an object file
-src/matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.o
-.PHONY : src/matrix.cpp.o
+src/GUI/interface.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/interface.cpp.o
+.PHONY : src/GUI/interface.cpp.o
 
-src/matrix.i: src/matrix.cpp.i
+src/GUI/interface.i: src/GUI/interface.cpp.i
 
-.PHONY : src/matrix.i
+.PHONY : src/GUI/interface.i
 
 # target to preprocess a source file
-src/matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.i
-.PHONY : src/matrix.cpp.i
+src/GUI/interface.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/interface.cpp.i
+.PHONY : src/GUI/interface.cpp.i
 
-src/matrix.s: src/matrix.cpp.s
+src/GUI/interface.s: src/GUI/interface.cpp.s
 
-.PHONY : src/matrix.s
+.PHONY : src/GUI/interface.s
 
 # target to generate assembly for a file
-src/matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/matrix.cpp.s
-.PHONY : src/matrix.cpp.s
+src/GUI/interface.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/interface.cpp.s
+.PHONY : src/GUI/interface.cpp.s
 
-src/neuralNetwork.o: src/neuralNetwork.cpp.o
+src/GUI/main.o: src/GUI/main.cpp.o
 
-.PHONY : src/neuralNetwork.o
+.PHONY : src/GUI/main.o
 
 # target to build an object file
-src/neuralNetwork.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.o
-.PHONY : src/neuralNetwork.cpp.o
+src/GUI/main.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/main.cpp.o
+.PHONY : src/GUI/main.cpp.o
 
-src/neuralNetwork.i: src/neuralNetwork.cpp.i
+src/GUI/main.i: src/GUI/main.cpp.i
 
-.PHONY : src/neuralNetwork.i
+.PHONY : src/GUI/main.i
 
 # target to preprocess a source file
-src/neuralNetwork.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.i
-.PHONY : src/neuralNetwork.cpp.i
+src/GUI/main.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/main.cpp.i
+.PHONY : src/GUI/main.cpp.i
 
-src/neuralNetwork.s: src/neuralNetwork.cpp.s
+src/GUI/main.s: src/GUI/main.cpp.s
 
-.PHONY : src/neuralNetwork.s
+.PHONY : src/GUI/main.s
 
 # target to generate assembly for a file
-src/neuralNetwork.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuralNetwork.cpp.s
-.PHONY : src/neuralNetwork.cpp.s
+src/GUI/main.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/main.cpp.s
+.PHONY : src/GUI/main.cpp.s
 
-src/neuron.o: src/neuron.cpp.o
+tests/OCR_test.o: tests/OCR_test.cpp.o
 
-.PHONY : src/neuron.o
+.PHONY : tests/OCR_test.o
 
 # target to build an object file
-src/neuron.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.o
-.PHONY : src/neuron.cpp.o
+tests/OCR_test.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.o
+.PHONY : tests/OCR_test.cpp.o
 
-src/neuron.i: src/neuron.cpp.i
+tests/OCR_test.i: tests/OCR_test.cpp.i
 
-.PHONY : src/neuron.i
-
-# target to preprocess a source file
-src/neuron.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.i
-.PHONY : src/neuron.cpp.i
-
-src/neuron.s: src/neuron.cpp.s
-
-.PHONY : src/neuron.s
-
-# target to generate assembly for a file
-src/neuron.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/neuron.cpp.s
-.PHONY : src/neuron.cpp.s
-
-src/utils/math.o: src/utils/math.cpp.o
-
-.PHONY : src/utils/math.o
-
-# target to build an object file
-src/utils/math.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.o
-.PHONY : src/utils/math.cpp.o
-
-src/utils/math.i: src/utils/math.cpp.i
-
-.PHONY : src/utils/math.i
+.PHONY : tests/OCR_test.i
 
 # target to preprocess a source file
-src/utils/math.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.i
-.PHONY : src/utils/math.cpp.i
+tests/OCR_test.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.i
+.PHONY : tests/OCR_test.cpp.i
 
-src/utils/math.s: src/utils/math.cpp.s
+tests/OCR_test.s: tests/OCR_test.cpp.s
 
-.PHONY : src/utils/math.s
-
-# target to generate assembly for a file
-src/utils/math.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/src/utils/math.cpp.s
-.PHONY : src/utils/math.cpp.s
-
-tests/feedForward.o: tests/feedForward.cpp.o
-
-.PHONY : tests/feedForward.o
-
-# target to build an object file
-tests/feedForward.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.o
-.PHONY : tests/feedForward.cpp.o
-
-tests/feedForward.i: tests/feedForward.cpp.i
-
-.PHONY : tests/feedForward.i
-
-# target to preprocess a source file
-tests/feedForward.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.i
-.PHONY : tests/feedForward.cpp.i
-
-tests/feedForward.s: tests/feedForward.cpp.s
-
-.PHONY : tests/feedForward.s
+.PHONY : tests/OCR_test.s
 
 # target to generate assembly for a file
-tests/feedForward.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/tests/feedForward.cpp.s
-.PHONY : tests/feedForward.cpp.s
+tests/OCR_test.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.s
+.PHONY : tests/OCR_test.cpp.s
 
 # Help Target
 help:
@@ -293,25 +212,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... OCR-Implementation"
-	@echo "... src/layer.o"
-	@echo "... src/layer.i"
-	@echo "... src/layer.s"
-	@echo "... src/matrix.o"
-	@echo "... src/matrix.i"
-	@echo "... src/matrix.s"
-	@echo "... src/neuralNetwork.o"
-	@echo "... src/neuralNetwork.i"
-	@echo "... src/neuralNetwork.s"
-	@echo "... src/neuron.o"
-	@echo "... src/neuron.i"
-	@echo "... src/neuron.s"
-	@echo "... src/utils/math.o"
-	@echo "... src/utils/math.i"
-	@echo "... src/utils/math.s"
-	@echo "... tests/feedForward.o"
-	@echo "... tests/feedForward.i"
-	@echo "... tests/feedForward.s"
+	@echo "... OCR_with_GUI"
+	@echo "... src/GUI/interface.o"
+	@echo "... src/GUI/interface.i"
+	@echo "... src/GUI/interface.s"
+	@echo "... src/GUI/main.o"
+	@echo "... src/GUI/main.i"
+	@echo "... src/GUI/main.s"
+	@echo "... tests/OCR_test.o"
+	@echo "... tests/OCR_test.i"
+	@echo "... tests/OCR_test.s"
 .PHONY : help
 
 

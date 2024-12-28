@@ -1,0 +1,7 @@
+{
+    "topology": [3,2,2],
+    "testFile": "/home/shawaiz-haider/OOP/EndSemProject/data/exampleData.csv",
+    "labelsFile": "/home/shawaiz-haider/OOP/EndSemProject/data/exampleLabels.csv",
+    "weightsFile": "/home/shawaiz-haider/OOP/EndSemProject/data/weights.json"
+
+}

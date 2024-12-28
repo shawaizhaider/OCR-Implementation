@@ -9,6 +9,17 @@ Layer::Layer(int size)
         this->neurons.push_back(neuron);
     }
 }
+
+Layer::Layer(int size, int activationFunction)
+{
+    this->layerSize = size;
+    for(int i = 0; i < size; i++)
+    {
+        Neuron *neuron = new Neuron(0.00, activationFunction);
+        this->neurons.push_back(neuron);
+    }
+}
+
 void Layer::setVal(int index, double val)
 {
     this->neurons[index]->initNeuron(val);
@@ -44,9 +55,8 @@ Matrix* Layer::convertDifferentiatedValsToMatrix()
 }
 Layer::~Layer()
 {
-    //TODO: Implement destructor
-    // for(int i = 0; i < this->layerSize; i++)
-    // {
-    //     delete this->neurons[i];
-    // }
+    for(int i = 0; i < this->layerSize; i++)
+    {
+        delete this->neurons[i];
+    }
 }

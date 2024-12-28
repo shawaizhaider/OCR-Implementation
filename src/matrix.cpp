@@ -36,6 +36,8 @@ void Matrix::printMatrix()
         cout << endl;
     }
 }
+
+
 /*Implement*/
 double Matrix::generateRandomVal()
 {

@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/shawaiz-haider/OOP/EndSemProject
 CMAKE_BINARY_DIR = /home/shawaiz-haider/OOP/EndSemProject/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/OCR-Implementation.dir
+# Target rules for target CMakeFiles/OCR_with_GUI.dir
 
 # All Build rule for target.
-CMakeFiles/OCR-Implementation.dir/all:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/depend
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target OCR-Implementation"
-.PHONY : CMakeFiles/OCR-Implementation.dir/all
+CMakeFiles/OCR_with_GUI.dir/all:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/depend
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=1,2,3,4 "Built target OCR_with_GUI"
+.PHONY : CMakeFiles/OCR_with_GUI.dir/all
 
 # Include target in all.
-all: CMakeFiles/OCR-Implementation.dir/all
+all: CMakeFiles/OCR_with_GUI.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/OCR-Implementation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OCR-Implementation.dir/all
+CMakeFiles/OCR_with_GUI.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OCR_with_GUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 0
-.PHONY : CMakeFiles/OCR-Implementation.dir/rule
+.PHONY : CMakeFiles/OCR_with_GUI.dir/rule
 
 # Convenience name for target.
-OCR-Implementation: CMakeFiles/OCR-Implementation.dir/rule
+OCR_with_GUI: CMakeFiles/OCR_with_GUI.dir/rule
 
-.PHONY : OCR-Implementation
-
-# clean rule for target.
-CMakeFiles/OCR-Implementation.dir/clean:
-	$(MAKE) -f CMakeFiles/OCR-Implementation.dir/build.make CMakeFiles/OCR-Implementation.dir/clean
-.PHONY : CMakeFiles/OCR-Implementation.dir/clean
+.PHONY : OCR_with_GUI
 
 # clean rule for target.
-clean: CMakeFiles/OCR-Implementation.dir/clean
+CMakeFiles/OCR_with_GUI.dir/clean:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/clean
+.PHONY : CMakeFiles/OCR_with_GUI.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/OCR_with_GUI.dir/clean
 
 .PHONY : clean
 

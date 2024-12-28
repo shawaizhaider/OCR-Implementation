@@ -14,7 +14,9 @@ class Layer{
         vector<Neuron*> neurons;
     public:
         Layer(int size);
+        Layer(int size, int activationFunction);
         void setVal(int index, double val);
+        vector<double> getActivationVals();
         vector<Neuron*> getNeurons(){return this->neurons;}
         void setNeurons(vector<Neuron*> neurons){this->neurons = neurons;}
         Matrix* convertValsToMatrix();
