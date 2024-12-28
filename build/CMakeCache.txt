@@ -114,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=OCR-Implementation
+CMAKE_PROJECT_NAME:STATIC=OCR_with_GUI
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -173,6 +173,27 @@ OCR-Implementation_BINARY_DIR:STATIC=/home/shawaiz-haider/OOP/EndSemProject/buil
 
 //Value Computed by CMake
 OCR-Implementation_SOURCE_DIR:STATIC=/home/shawaiz-haider/OOP/EndSemProject
+
+//Value Computed by CMake
+OCR_with_GUI_BINARY_DIR:STATIC=/home/shawaiz-haider/OOP/EndSemProject/build
+
+//Value Computed by CMake
+OCR_with_GUI_SOURCE_DIR:STATIC=/home/shawaiz-haider/OOP/EndSemProject
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/opencv4
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
+//The directory containing a CMake configuration file for PoDoFo.
+PoDoFo_DIR:PATH=PoDoFo_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for Tesseract.
+Tesseract_DIR:PATH=Tesseract_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for raylib.
+raylib_DIR:PATH=raylib_DIR-NOTFOUND
 
 
 ########################
@@ -308,4 +329,112 @@ CMAKE_UNAME:INTERNAL=/usr/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v4.6.0()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v1.8.1()]
+Leptonica_CFLAGS:INTERNAL=-I/usr/include/leptonica
+Leptonica_CFLAGS_I:INTERNAL=
+Leptonica_CFLAGS_OTHER:INTERNAL=
+Leptonica_FOUND:INTERNAL=1
+Leptonica_INCLUDEDIR:INTERNAL=/usr/include/leptonica
+Leptonica_INCLUDE_DIRS:INTERNAL=/usr/include/leptonica
+Leptonica_LDFLAGS:INTERNAL=-llept
+Leptonica_LDFLAGS_OTHER:INTERNAL=
+Leptonica_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+Leptonica_LIBRARIES:INTERNAL=lept
+Leptonica_LIBRARY_DIRS:INTERNAL=
+Leptonica_LIBS:INTERNAL=
+Leptonica_LIBS_L:INTERNAL=
+Leptonica_LIBS_OTHER:INTERNAL=
+Leptonica_LIBS_PATHS:INTERNAL=
+Leptonica_PREFIX:INTERNAL=/usr
+Leptonica_STATIC_CFLAGS:INTERNAL=-I/usr/include/leptonica
+Leptonica_STATIC_CFLAGS_I:INTERNAL=
+Leptonica_STATIC_CFLAGS_OTHER:INTERNAL=
+Leptonica_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/leptonica
+Leptonica_STATIC_LDFLAGS:INTERNAL=-llept;-lz;-lpng16;-ljpeg;-lopenjp2;-lgif;-ltiff;-lwebp;-lwebpmux
+Leptonica_STATIC_LDFLAGS_OTHER:INTERNAL=
+Leptonica_STATIC_LIBDIR:INTERNAL=
+Leptonica_STATIC_LIBRARIES:INTERNAL=lept;z;png16;jpeg;openjp2;gif;tiff;webp;webpmux
+Leptonica_STATIC_LIBRARY_DIRS:INTERNAL=
+Leptonica_STATIC_LIBS:INTERNAL=
+Leptonica_STATIC_LIBS_L:INTERNAL=
+Leptonica_STATIC_LIBS_OTHER:INTERNAL=
+Leptonica_STATIC_LIBS_PATHS:INTERNAL=
+Leptonica_VERSION:INTERNAL=1.82.0
+Leptonica_lept_INCLUDEDIR:INTERNAL=
+Leptonica_lept_LIBDIR:INTERNAL=
+Leptonica_lept_PREFIX:INTERNAL=
+Leptonica_lept_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+POFO_CFLAGS:INTERNAL=
+POFO_CFLAGS_I:INTERNAL=
+POFO_CFLAGS_OTHER:INTERNAL=
+POFO_FOUND:INTERNAL=
+POFO_INCLUDEDIR:INTERNAL=
+POFO_LIBDIR:INTERNAL=
+POFO_LIBS:INTERNAL=
+POFO_LIBS_L:INTERNAL=
+POFO_LIBS_OTHER:INTERNAL=
+POFO_LIBS_PATHS:INTERNAL=
+POFO_PREFIX:INTERNAL=
+POFO_STATIC_CFLAGS:INTERNAL=
+POFO_STATIC_CFLAGS_I:INTERNAL=
+POFO_STATIC_CFLAGS_OTHER:INTERNAL=
+POFO_STATIC_LIBDIR:INTERNAL=
+POFO_STATIC_LIBS:INTERNAL=
+POFO_STATIC_LIBS_L:INTERNAL=
+POFO_STATIC_LIBS_OTHER:INTERNAL=
+POFO_STATIC_LIBS_PATHS:INTERNAL=
+POFO_VERSION:INTERNAL=
+POFO_podofo_INCLUDEDIR:INTERNAL=
+POFO_podofo_LIBDIR:INTERNAL=
+POFO_podofo_PREFIX:INTERNAL=
+POFO_podofo_VERSION:INTERNAL=
+Tesseract_CFLAGS:INTERNAL=-I/usr/include/leptonica
+Tesseract_CFLAGS_I:INTERNAL=
+Tesseract_CFLAGS_OTHER:INTERNAL=
+Tesseract_FOUND:INTERNAL=1
+Tesseract_IMPORTED_TARGET_INCLUDEDIR:INTERNAL=
+Tesseract_IMPORTED_TARGET_LIBDIR:INTERNAL=
+Tesseract_IMPORTED_TARGET_PREFIX:INTERNAL=
+Tesseract_IMPORTED_TARGET_VERSION:INTERNAL=
+Tesseract_INCLUDEDIR:INTERNAL=/usr/include
+Tesseract_INCLUDE_DIRS:INTERNAL=/usr/include/leptonica
+Tesseract_LDFLAGS:INTERNAL=-ltesseract;-larchive;-lcurl
+Tesseract_LDFLAGS_OTHER:INTERNAL=
+Tesseract_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+Tesseract_LIBRARIES:INTERNAL=tesseract;archive;curl
+Tesseract_LIBRARY_DIRS:INTERNAL=
+Tesseract_LIBS:INTERNAL=
+Tesseract_LIBS_L:INTERNAL=
+Tesseract_LIBS_OTHER:INTERNAL=
+Tesseract_LIBS_PATHS:INTERNAL=
+Tesseract_PREFIX:INTERNAL=/usr
+Tesseract_STATIC_CFLAGS:INTERNAL=-I/usr/include/leptonica
+Tesseract_STATIC_CFLAGS_I:INTERNAL=
+Tesseract_STATIC_CFLAGS_OTHER:INTERNAL=
+Tesseract_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/leptonica
+Tesseract_STATIC_LDFLAGS:INTERNAL=-ltesseract;-larchive;-lcurl;-lpthread;-llept;-lz;-lpng16;-ljpeg;-lopenjp2;-lgif;-ltiff;-lwebp;-lwebpmux
+Tesseract_STATIC_LDFLAGS_OTHER:INTERNAL=
+Tesseract_STATIC_LIBDIR:INTERNAL=
+Tesseract_STATIC_LIBRARIES:INTERNAL=tesseract;archive;curl;pthread;lept;z;png16;jpeg;openjp2;gif;tiff;webp;webpmux
+Tesseract_STATIC_LIBRARY_DIRS:INTERNAL=
+Tesseract_STATIC_LIBS:INTERNAL=
+Tesseract_STATIC_LIBS_L:INTERNAL=
+Tesseract_STATIC_LIBS_OTHER:INTERNAL=
+Tesseract_STATIC_LIBS_PATHS:INTERNAL=
+Tesseract_VERSION:INTERNAL=5.3.4
+Tesseract_lept_INCLUDEDIR:INTERNAL=
+Tesseract_lept_LIBDIR:INTERNAL=
+Tesseract_lept_PREFIX:INTERNAL=
+Tesseract_lept_VERSION:INTERNAL=
+Tesseract_tesseract_INCLUDEDIR:INTERNAL=
+Tesseract_tesseract_LIBDIR:INTERNAL=
+Tesseract_tesseract_PREFIX:INTERNAL=
+Tesseract_tesseract_VERSION:INTERNAL=
+__pkg_config_checked_Leptonica:INTERNAL=1
+__pkg_config_checked_Tesseract:INTERNAL=1
 

@@ -111,324 +111,98 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named predict
+# Target rules for targets named OCR_with_GUI
 
 # Build rule for target.
-predict: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 predict
-.PHONY : predict
+OCR_with_GUI: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 OCR_with_GUI
+.PHONY : OCR_with_GUI
 
 # fast build rule for target.
-predict/fast:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/build
-.PHONY : predict/fast
+OCR_with_GUI/fast:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/build
+.PHONY : OCR_with_GUI/fast
 
-#=============================================================================
-# Target rules for targets named train-model
+src/GUI/interface.o: src/GUI/interface.cpp.o
 
-# Build rule for target.
-train-model: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 train-model
-.PHONY : train-model
-
-# fast build rule for target.
-train-model/fast:
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/build
-.PHONY : train-model/fast
-
-src/layer.o: src/layer.cpp.o
-
-.PHONY : src/layer.o
+.PHONY : src/GUI/interface.o
 
 # target to build an object file
-src/layer.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/layer.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/layer.cpp.o
-.PHONY : src/layer.cpp.o
+src/GUI/interface.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/interface.cpp.o
+.PHONY : src/GUI/interface.cpp.o
 
-src/layer.i: src/layer.cpp.i
+src/GUI/interface.i: src/GUI/interface.cpp.i
 
-.PHONY : src/layer.i
+.PHONY : src/GUI/interface.i
 
 # target to preprocess a source file
-src/layer.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/layer.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/layer.cpp.i
-.PHONY : src/layer.cpp.i
+src/GUI/interface.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/interface.cpp.i
+.PHONY : src/GUI/interface.cpp.i
 
-src/layer.s: src/layer.cpp.s
+src/GUI/interface.s: src/GUI/interface.cpp.s
 
-.PHONY : src/layer.s
+.PHONY : src/GUI/interface.s
 
 # target to generate assembly for a file
-src/layer.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/layer.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/layer.cpp.s
-.PHONY : src/layer.cpp.s
+src/GUI/interface.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/interface.cpp.s
+.PHONY : src/GUI/interface.cpp.s
 
-src/load_model.o: src/load_model.cpp.o
+src/GUI/main.o: src/GUI/main.cpp.o
 
-.PHONY : src/load_model.o
+.PHONY : src/GUI/main.o
 
 # target to build an object file
-src/load_model.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/load_model.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/load_model.cpp.o
-.PHONY : src/load_model.cpp.o
+src/GUI/main.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/main.cpp.o
+.PHONY : src/GUI/main.cpp.o
 
-src/load_model.i: src/load_model.cpp.i
+src/GUI/main.i: src/GUI/main.cpp.i
 
-.PHONY : src/load_model.i
+.PHONY : src/GUI/main.i
 
 # target to preprocess a source file
-src/load_model.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/load_model.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/load_model.cpp.i
-.PHONY : src/load_model.cpp.i
+src/GUI/main.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/main.cpp.i
+.PHONY : src/GUI/main.cpp.i
 
-src/load_model.s: src/load_model.cpp.s
+src/GUI/main.s: src/GUI/main.cpp.s
 
-.PHONY : src/load_model.s
+.PHONY : src/GUI/main.s
 
 # target to generate assembly for a file
-src/load_model.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/load_model.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/load_model.cpp.s
-.PHONY : src/load_model.cpp.s
+src/GUI/main.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/main.cpp.s
+.PHONY : src/GUI/main.cpp.s
 
-src/matrix.o: src/matrix.cpp.o
+tests/OCR_test.o: tests/OCR_test.cpp.o
 
-.PHONY : src/matrix.o
+.PHONY : tests/OCR_test.o
 
 # target to build an object file
-src/matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/matrix.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/matrix.cpp.o
-.PHONY : src/matrix.cpp.o
+tests/OCR_test.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.o
+.PHONY : tests/OCR_test.cpp.o
 
-src/matrix.i: src/matrix.cpp.i
+tests/OCR_test.i: tests/OCR_test.cpp.i
 
-.PHONY : src/matrix.i
-
-# target to preprocess a source file
-src/matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/matrix.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/matrix.cpp.i
-.PHONY : src/matrix.cpp.i
-
-src/matrix.s: src/matrix.cpp.s
-
-.PHONY : src/matrix.s
-
-# target to generate assembly for a file
-src/matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/matrix.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/matrix.cpp.s
-.PHONY : src/matrix.cpp.s
-
-src/neuralNetwork.o: src/neuralNetwork.cpp.o
-
-.PHONY : src/neuralNetwork.o
-
-# target to build an object file
-src/neuralNetwork.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/neuralNetwork.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/neuralNetwork.cpp.o
-.PHONY : src/neuralNetwork.cpp.o
-
-src/neuralNetwork.i: src/neuralNetwork.cpp.i
-
-.PHONY : src/neuralNetwork.i
+.PHONY : tests/OCR_test.i
 
 # target to preprocess a source file
-src/neuralNetwork.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/neuralNetwork.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/neuralNetwork.cpp.i
-.PHONY : src/neuralNetwork.cpp.i
+tests/OCR_test.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.i
+.PHONY : tests/OCR_test.cpp.i
 
-src/neuralNetwork.s: src/neuralNetwork.cpp.s
+tests/OCR_test.s: tests/OCR_test.cpp.s
 
-.PHONY : src/neuralNetwork.s
-
-# target to generate assembly for a file
-src/neuralNetwork.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/neuralNetwork.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/neuralNetwork.cpp.s
-.PHONY : src/neuralNetwork.cpp.s
-
-src/neuron.o: src/neuron.cpp.o
-
-.PHONY : src/neuron.o
-
-# target to build an object file
-src/neuron.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/neuron.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/neuron.cpp.o
-.PHONY : src/neuron.cpp.o
-
-src/neuron.i: src/neuron.cpp.i
-
-.PHONY : src/neuron.i
-
-# target to preprocess a source file
-src/neuron.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/neuron.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/neuron.cpp.i
-.PHONY : src/neuron.cpp.i
-
-src/neuron.s: src/neuron.cpp.s
-
-.PHONY : src/neuron.s
+.PHONY : tests/OCR_test.s
 
 # target to generate assembly for a file
-src/neuron.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/neuron.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/neuron.cpp.s
-.PHONY : src/neuron.cpp.s
-
-src/save_model.o: src/save_model.cpp.o
-
-.PHONY : src/save_model.o
-
-# target to build an object file
-src/save_model.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/save_model.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/save_model.cpp.o
-.PHONY : src/save_model.cpp.o
-
-src/save_model.i: src/save_model.cpp.i
-
-.PHONY : src/save_model.i
-
-# target to preprocess a source file
-src/save_model.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/save_model.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/save_model.cpp.i
-.PHONY : src/save_model.cpp.i
-
-src/save_model.s: src/save_model.cpp.s
-
-.PHONY : src/save_model.s
-
-# target to generate assembly for a file
-src/save_model.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/save_model.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/save_model.cpp.s
-.PHONY : src/save_model.cpp.s
-
-src/utils/math.o: src/utils/math.cpp.o
-
-.PHONY : src/utils/math.o
-
-# target to build an object file
-src/utils/math.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/utils/math.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/utils/math.cpp.o
-.PHONY : src/utils/math.cpp.o
-
-src/utils/math.i: src/utils/math.cpp.i
-
-.PHONY : src/utils/math.i
-
-# target to preprocess a source file
-src/utils/math.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/utils/math.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/utils/math.cpp.i
-.PHONY : src/utils/math.cpp.i
-
-src/utils/math.s: src/utils/math.cpp.s
-
-.PHONY : src/utils/math.s
-
-# target to generate assembly for a file
-src/utils/math.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/utils/math.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/utils/math.cpp.s
-.PHONY : src/utils/math.cpp.s
-
-src/utils/read_csv.o: src/utils/read_csv.cpp.o
-
-.PHONY : src/utils/read_csv.o
-
-# target to build an object file
-src/utils/read_csv.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/utils/read_csv.cpp.o
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/utils/read_csv.cpp.o
-.PHONY : src/utils/read_csv.cpp.o
-
-src/utils/read_csv.i: src/utils/read_csv.cpp.i
-
-.PHONY : src/utils/read_csv.i
-
-# target to preprocess a source file
-src/utils/read_csv.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/utils/read_csv.cpp.i
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/utils/read_csv.cpp.i
-.PHONY : src/utils/read_csv.cpp.i
-
-src/utils/read_csv.s: src/utils/read_csv.cpp.s
-
-.PHONY : src/utils/read_csv.s
-
-# target to generate assembly for a file
-src/utils/read_csv.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/src/utils/read_csv.cpp.s
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/src/utils/read_csv.cpp.s
-.PHONY : src/utils/read_csv.cpp.s
-
-tests/load_model.o: tests/load_model.cpp.o
-
-.PHONY : tests/load_model.o
-
-# target to build an object file
-tests/load_model.cpp.o:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/tests/load_model.cpp.o
-.PHONY : tests/load_model.cpp.o
-
-tests/load_model.i: tests/load_model.cpp.i
-
-.PHONY : tests/load_model.i
-
-# target to preprocess a source file
-tests/load_model.cpp.i:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/tests/load_model.cpp.i
-.PHONY : tests/load_model.cpp.i
-
-tests/load_model.s: tests/load_model.cpp.s
-
-.PHONY : tests/load_model.s
-
-# target to generate assembly for a file
-tests/load_model.cpp.s:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/tests/load_model.cpp.s
-.PHONY : tests/load_model.cpp.s
-
-tests/train_model.o: tests/train_model.cpp.o
-
-.PHONY : tests/train_model.o
-
-# target to build an object file
-tests/train_model.cpp.o:
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/tests/train_model.cpp.o
-.PHONY : tests/train_model.cpp.o
-
-tests/train_model.i: tests/train_model.cpp.i
-
-.PHONY : tests/train_model.i
-
-# target to preprocess a source file
-tests/train_model.cpp.i:
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/tests/train_model.cpp.i
-.PHONY : tests/train_model.cpp.i
-
-tests/train_model.s: tests/train_model.cpp.s
-
-.PHONY : tests/train_model.s
-
-# target to generate assembly for a file
-tests/train_model.cpp.s:
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/tests/train_model.cpp.s
-.PHONY : tests/train_model.cpp.s
+tests/OCR_test.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.s
+.PHONY : tests/OCR_test.cpp.s
 
 # Help Target
 help:
@@ -438,38 +212,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... predict"
-	@echo "... train-model"
-	@echo "... src/layer.o"
-	@echo "... src/layer.i"
-	@echo "... src/layer.s"
-	@echo "... src/load_model.o"
-	@echo "... src/load_model.i"
-	@echo "... src/load_model.s"
-	@echo "... src/matrix.o"
-	@echo "... src/matrix.i"
-	@echo "... src/matrix.s"
-	@echo "... src/neuralNetwork.o"
-	@echo "... src/neuralNetwork.i"
-	@echo "... src/neuralNetwork.s"
-	@echo "... src/neuron.o"
-	@echo "... src/neuron.i"
-	@echo "... src/neuron.s"
-	@echo "... src/save_model.o"
-	@echo "... src/save_model.i"
-	@echo "... src/save_model.s"
-	@echo "... src/utils/math.o"
-	@echo "... src/utils/math.i"
-	@echo "... src/utils/math.s"
-	@echo "... src/utils/read_csv.o"
-	@echo "... src/utils/read_csv.i"
-	@echo "... src/utils/read_csv.s"
-	@echo "... tests/load_model.o"
-	@echo "... tests/load_model.i"
-	@echo "... tests/load_model.s"
-	@echo "... tests/train_model.o"
-	@echo "... tests/train_model.i"
-	@echo "... tests/train_model.s"
+	@echo "... OCR_with_GUI"
+	@echo "... src/GUI/interface.o"
+	@echo "... src/GUI/interface.i"
+	@echo "... src/GUI/interface.s"
+	@echo "... src/GUI/main.o"
+	@echo "... src/GUI/main.i"
+	@echo "... src/GUI/main.s"
+	@echo "... tests/OCR_test.o"
+	@echo "... tests/OCR_test.i"
+	@echo "... tests/OCR_test.s"
 .PHONY : help
 
 

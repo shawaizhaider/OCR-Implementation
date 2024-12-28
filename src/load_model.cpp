@@ -6,14 +6,12 @@ void neuralNetwork::loadWeights(string filename){
     json j;
     file >> j;
     vector<vector<vector<double>>> weightSet = j["weights"];
-    for(int i = 0; i < weightSet.size(); i++){
-        Matrix* weightMatrix = new Matrix(weightSet[i].size(), weightSet[i][0].size(), false);
-        for(int j = 0; j < weightSet[i].size(); j++){
-            for(int k = 0; k < weightSet[i][j].size(); k++){
-                weightMatrix->setMatrixVal(j, k, weightSet[i][j][k]);
+    for(int i = 0; i < weightsMatrices.size(); i++){
+        for(int j = 0; j < weightsMatrices[i]->getNumRows(); j++){
+            for(int k = 0; k < weightsMatrices[i]->getNumCols(); k++){
+                this->weightsMatrices[i]->setMatrixVal(j, k, weightSet[i][j][k]);
             }
         }
-        this->weightsMatrices.push_back(weightMatrix);
     }
     file.close();
 }
@@ -23,8 +21,9 @@ void neuralNetwork::loadBiases(string filename){
     json j;
     file >> j;
     vector<vector<double>> biasSet = j["biases"];
-    for(int i = 0; i < biasSet.size(); i++){
-        for(int j = 0; j < biasSet[i].size(); j++){
+    this->biases.clear(); 
+    for (int i = 0; i < biasSet.size(); i++) {
+        for (int j = 0; j < biasSet[i].size(); j++) {
             this->biases.push_back(biasSet[i][j]);
         }
     }
@@ -77,18 +76,17 @@ void neuralNetwork::loadModel(string filename){
     json j;
     file >> j;
     vector<vector<vector<double>>> weightSet = j["weights"];
-    for(int i = 0; i < weightSet.size(); i++){
-        Matrix* weightMatrix = new Matrix(weightSet[i].size(), weightSet[i][0].size(), false);
-        for(int j = 0; j < weightSet[i].size(); j++){
-            for(int k = 0; k < weightSet[i][j].size(); k++){
-                weightMatrix->setMatrixVal(j, k, weightSet[i][j][k]);
+    for(int i = 0; i < weightsMatrices.size(); i++){
+        for(int j = 0; j < weightsMatrices[i]->getNumRows(); j++){
+            for(int k = 0; k < weightsMatrices[i]->getNumCols(); k++){
+                this->weightsMatrices[i]->setMatrixVal(j, k, weightSet[i][j][k]);
             }
         }
-        this->weightsMatrices.push_back(weightMatrix);
     }
     vector<vector<double>> biasSet = j["biases"];
-    for(int i = 0; i < biasSet.size(); i++){
-        for(int j = 0; j < biasSet[i].size(); j++){
+    this->biases.clear(); 
+    for (int i = 0; i < biasSet.size(); i++) {
+        for (int j = 0; j < biasSet[i].size(); j++) {
             this->biases.push_back(biasSet[i][j]);
         }
     }

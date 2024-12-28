@@ -490,33 +490,19 @@ random
 math.h
 -
 
-/home/shawaiz-haider/OOP/EndSemProject/src/saving_model.cpp
-../include/neuralNetwork.hpp
-/home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
-
 /home/shawaiz-haider/OOP/EndSemProject/src/utils/math.cpp
 ../../include/utils/math.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/utils/math.hpp
 
-/home/shawaiz-haider/OOP/EndSemProject/src/utils/read_csv.cpp
-../../include/utils/read_csv.hpp
-/home/shawaiz-haider/OOP/EndSemProject/include/utils/read_csv.hpp
-
-/home/shawaiz-haider/OOP/EndSemProject/tests/train_using_config.cpp
+/home/shawaiz-haider/OOP/EndSemProject/tests/feedForward.cpp
 ../include/neuralNetwork.hpp
 /home/shawaiz-haider/OOP/EndSemProject/include/neuralNetwork.hpp
-../include/json.hpp
-/home/shawaiz-haider/OOP/EndSemProject/include/json.hpp
-iostream
--
-fstream
--
+../include/matrix.hpp
+/home/shawaiz-haider/OOP/EndSemProject/include/matrix.hpp
 vector
 -
-ostream
+iostream
 -
-streambuf
--
-time.h
+cstdlib
 -
 

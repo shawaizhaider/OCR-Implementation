@@ -60,76 +60,39 @@ CMAKE_SOURCE_DIR = /home/shawaiz-haider/OOP/EndSemProject
 CMAKE_BINARY_DIR = /home/shawaiz-haider/OOP/EndSemProject/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/predict.dir
+# Target rules for target CMakeFiles/OCR_with_GUI.dir
 
 # All Build rule for target.
-CMakeFiles/predict.dir/all:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/depend
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target predict"
-.PHONY : CMakeFiles/predict.dir/all
+CMakeFiles/OCR_with_GUI.dir/all:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/depend
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=1,2,3,4 "Built target OCR_with_GUI"
+.PHONY : CMakeFiles/OCR_with_GUI.dir/all
 
 # Include target in all.
-all: CMakeFiles/predict.dir/all
+all: CMakeFiles/OCR_with_GUI.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/predict.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/predict.dir/all
+CMakeFiles/OCR_with_GUI.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/OCR_with_GUI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 0
-.PHONY : CMakeFiles/predict.dir/rule
+.PHONY : CMakeFiles/OCR_with_GUI.dir/rule
 
 # Convenience name for target.
-predict: CMakeFiles/predict.dir/rule
+OCR_with_GUI: CMakeFiles/OCR_with_GUI.dir/rule
 
-.PHONY : predict
-
-# clean rule for target.
-CMakeFiles/predict.dir/clean:
-	$(MAKE) -f CMakeFiles/predict.dir/build.make CMakeFiles/predict.dir/clean
-.PHONY : CMakeFiles/predict.dir/clean
+.PHONY : OCR_with_GUI
 
 # clean rule for target.
-clean: CMakeFiles/predict.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/train-model.dir
-
-# All Build rule for target.
-CMakeFiles/train-model.dir/all:
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/depend
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18,19,20 "Built target train-model"
-.PHONY : CMakeFiles/train-model.dir/all
-
-# Include target in all.
-all: CMakeFiles/train-model.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/train-model.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 10
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/train-model.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shawaiz-haider/OOP/EndSemProject/build/CMakeFiles 0
-.PHONY : CMakeFiles/train-model.dir/rule
-
-# Convenience name for target.
-train-model: CMakeFiles/train-model.dir/rule
-
-.PHONY : train-model
+CMakeFiles/OCR_with_GUI.dir/clean:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/clean
+.PHONY : CMakeFiles/OCR_with_GUI.dir/clean
 
 # clean rule for target.
-CMakeFiles/train-model.dir/clean:
-	$(MAKE) -f CMakeFiles/train-model.dir/build.make CMakeFiles/train-model.dir/clean
-.PHONY : CMakeFiles/train-model.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/train-model.dir/clean
+clean: CMakeFiles/OCR_with_GUI.dir/clean
 
 .PHONY : clean
 
