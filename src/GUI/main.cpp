@@ -13,6 +13,9 @@ int main() {
     // State variables
     bool uploadMode = false;
     bool imageLoaded = false;
+    bool trainMode = false;
+    bool loadModelMode = false;
+    bool charRecognitionMode = false;
     bool ocrMode = false; // Define ocrMode here
     char *filePaths[MAX_FILEPATH_RECORDED] = {0};
     for (int i = 0; i < MAX_FILEPATH_RECORDED; i++) {
@@ -27,17 +30,44 @@ int main() {
         BeginDrawing();
         drawDottedBackground({155, 168, 171, 255});
 
-        if (!uploadMode) {
-            drawTitleAndButtons("Image to Text Converter", uploadMode);
+        if (!uploadMode && !trainMode && !loadModelMode && !charRecognitionMode) {
+            drawTitleAndButtons("Image to Text Converter", uploadMode, trainMode, loadModelMode, charRecognitionMode);
         } else if (ocrMode) {
             drawOCRResult(ocrText);
-        } else {
+            if (drawReturnToMainMenuButton()) {
+        ocrMode = false; // Return to main menu
+            }
+        
+        }else if (trainMode) {
+    
+            // handleTrainCustomModel();
+            if(drawReturnToMainMenuButton()){
+                trainMode = false; // Return to main men
+            }
+        } else if (loadModelMode) {
+        
+            // handleLoadCustomModel();
+            if(drawReturnToMainMenuButton()){
+                loadModelMode = false; // Return to main men
+            }
+        } else if (charRecognitionMode) {
+           
+            // handleCharacterRecognition();
+            if(drawReturnToMainMenuButton()){
+                charRecognitionMode = false;
+            }
+        } 
+        else {
             if (filePathCounter == 0) {
                 DrawText("Drop your files to this window!", 100, 40, 20, DARKGRAY);
                 handleFileDrop(filePathCounter, filePaths, imageLoaded, loadedImage, texture);
+                
             } else {
                 drawFileListAndLoadButton(filePathCounter, filePaths, imageLoaded, loadedImage, texture, ocrText, ocrMode);
             }
+            if (drawReturnToMainMenuButton()) {
+        uploadMode = false; // Return to main menu
+    }
             // drawLoadedImage(imageLoaded, texture);
         }
         EndDrawing();
@@ -119,25 +149,3 @@ void drawFileListAndLoadButton(int &filePathCounter, char *filePaths[], bool &im
     }
 }
 
-
-void drawOCRResult(const std::string &ocrText) {
-    const int screenW = GetScreenWidth();
-    const int screenH = GetScreenHeight();
-    const int textBoxWidth = screenW - 200;
-    const int textBoxHeight = screenH - 200;
-    const int textBoxX = (screenW - textBoxWidth) / 2;
-    const int textBoxY = (screenH - textBoxHeight) / 2;
-
-    DrawText("OCR Result:", textBoxX, textBoxY - 40, 20, DARKGRAY);
-    GuiTextBox((Rectangle){textBoxX, textBoxY, textBoxWidth, textBoxHeight}, (char *)ocrText.c_str(), ocrText.size(), false);
-
-    Rectangle copyButton = {
-        (float)(screenW/2 - 150),
-        (float)(textBoxY + textBoxHeight + 20),
-        300.f, 70.f
-    };
-
-    if (GuiButton(copyButton, "Copy to Clipboard")) {
-        SetClipboardText(ocrText.c_str());
-    }
-}

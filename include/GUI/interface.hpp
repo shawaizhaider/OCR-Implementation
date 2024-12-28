@@ -5,6 +5,7 @@
 #include <string>
 #include <raylib.h>
 #include "../../src/GUI/raygui.h"
+#include <vector>
 
 static const int screenWidth = 1000;
 static const int screenHeight = 800;
@@ -20,5 +21,11 @@ void drawTitleAndButtons(const char *titleText, bool &uploadMode);
 void drawFileListAndLoadButton(int &filePathCounter, char *filePaths[], bool &imageLoaded, Image &loadedImage, Texture2D &texture, std::string &ocrText, bool &ocrMode);
 void drawLoadedImage(bool imageLoaded, Texture2D &texture);
 void drawOCRResult(const std::string &ocrText);
-
+void handleTrainCustomModel();
+void handleLoadCustomModel();
+void handleCharacterRecognition();
+void drawTitleAndButtons(const char *titleText, bool &uploadMode, bool &trainMode, bool &loadModelMode, bool &charRecognitionMode);
+bool drawReturnToMainMenuButton();
+std::vector<std::string> WrapText(Font &font, const std::string &text, int fontSize, int maxWidth);
+void drawOCRResult(const std::string &ocrText);
 #endif // GUI_IMPLEMENTATION

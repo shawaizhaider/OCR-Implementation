@@ -58,36 +58,66 @@ void drawDottedBackground(Color color) {
     }
 }
 
-// Helper: Draw title and buttons
-void drawTitleAndButtons(const char *titleText, bool &uploadMode) {
+void drawTitleAndButtons(const char *titleText, bool &uploadMode, bool &trainMode, bool &loadModelMode, bool &charRecognitionMode) {
     const int screenW = GetScreenWidth();
     const int screenH = GetScreenHeight();
     const int titleFontSize = 60;  
-    const int titlePositionX = screenW/2 - MeasureText(titleText, titleFontSize)/2;
-    const int titlePositionY = screenH/4;
+    const int titlePositionX = screenW / 2 - MeasureText(titleText, titleFontSize) / 2;
+    const int titlePositionY = screenH / 8;
     DrawText(titleText, titlePositionX, titlePositionY, titleFontSize, DARKGRAY);
 
     const int buttonWidth = 300;
-    const int buttonHeight = 70;
-    const int buttonSpacing = 30;  
+    const int buttonHeight = 60; // Adjusted to fit all buttons
+    const int buttonSpacing = 20;
+
+    // Button positions
     Rectangle uploadButton = {
-        (float)(screenW/2 - buttonWidth/2),
-        (float)(screenH/2),
+        (float)(screenW / 2 - buttonWidth / 2),
+        (float)(screenH / 3),
+        (float)buttonWidth, (float)buttonHeight
+    };
+    Rectangle trainButton = {
+        (float)(screenW / 2 - buttonWidth / 2),
+        (float)(uploadButton.y + buttonHeight + buttonSpacing),
+        (float)buttonWidth, (float)buttonHeight
+    };
+    Rectangle loadButton = {
+        (float)(screenW / 2 - buttonWidth / 2),
+        (float)(trainButton.y + buttonHeight + buttonSpacing),
+        (float)buttonWidth, (float)buttonHeight
+    };
+    Rectangle charRecogButton = {
+        (float)(screenW / 2 - buttonWidth / 2),
+        (float)(loadButton.y + buttonHeight + buttonSpacing),
         (float)buttonWidth, (float)buttonHeight
     };
     Rectangle exitButton = {
-        (float)(screenW/2 - buttonWidth/2),
-        (float)(screenH/2 + buttonHeight + buttonSpacing),
+        (float)(screenW / 2 - buttonWidth / 2),
+        (float)(charRecogButton.y + buttonHeight + buttonSpacing),
         (float)buttonWidth, (float)buttonHeight
     };
+
+    // Set GUI styles
     GuiSetStyle(DEFAULT, TEXT_SIZE, 30);
+
+    // Buttons and corresponding actions
     if (GuiButton(uploadButton, "Upload Image")) {
         uploadMode = true;
+    }
+    if (GuiButton(trainButton, "Train Custom Model")) {
+        trainMode = true; // Switch to train mode
+    }
+    if (GuiButton(loadButton, "Load Custom Model")) {
+        loadModelMode = true; // Switch to load model mode
+    }
+    if (GuiButton(charRecogButton, "Character Recognition")) {
+        charRecognitionMode = true; // Switch to character recognition mode
     }
     if (GuiButton(exitButton, "Exit")) {
         CloseWindow();
     }
 }
+
 
 // Define a fixed area for the loaded image
 const Rectangle IMAGE_AREA = { (float)(GetScreenWidth() / 2 - 300), 100.0f, 600.0f, 400.0f }; // Adjust width and height as needed
@@ -133,3 +163,97 @@ void drawLoadedImage(bool imageLoaded, Texture2D &texture) {
                   0.0f,
                   WHITE);
 }
+
+
+bool drawReturnToMainMenuButton() {
+    const int buttonWidth = 200;
+    const int buttonHeight = 50;
+    const int buttonX = GetScreenWidth() - buttonWidth - 20; // Positioned at the bottom-right
+    const int buttonY = GetScreenHeight() - buttonHeight - 20;
+
+    Rectangle returnButton = {
+        (float)buttonX, (float)buttonY,
+        (float)buttonWidth, (float)buttonHeight
+    };
+
+    return GuiButton(returnButton, "Main Menu");
+}
+
+
+std::vector<std::string> WrapText(Font &font, const std::string &text, int fontSize, int maxWidth) {
+    std::vector<std::string> lines;
+    std::string currentLine;
+    int currentWidth = 0;
+
+    for (const char &ch : text) {
+        int charWidth = MeasureTextEx(font, std::string(1, ch).c_str(), fontSize, 2).x;
+        if (currentWidth + charWidth > maxWidth && ch == ' ') {
+            lines.push_back(currentLine);
+            currentLine.clear();
+            currentWidth = 0;
+        } else {
+            currentLine += ch;
+            currentWidth += charWidth;
+        }
+    }
+
+    if (!currentLine.empty()) {
+        lines.push_back(currentLine);
+    }
+
+    return lines;
+}
+
+void drawOCRResult(const std::string &ocrText) {
+    const int screenW = GetScreenWidth();
+    const int screenH = GetScreenHeight();
+    const int textBoxWidth = screenW - 300;
+    const int textBoxHeight = screenH - 300;
+    const int textBoxX = (screenW - textBoxWidth) / 2;
+    const int textBoxY = (screenH - textBoxHeight) / 2;
+
+    Font defaultFont = GetFontDefault(); // Using Raylib's default font
+    const int titleFontSize = 30;
+    const int contentFontSize = 20;
+    const Color titleColor = DARKGRAY;
+
+    // Draw the title
+    DrawTextEx(defaultFont, "OCR Result:", (Vector2){textBoxX, textBoxY - 50}, titleFontSize, 2, titleColor);
+
+    // Scrollable area for large OCR text
+    static int scrollOffset = 0; // Keep track of scroll position
+    const int scrollSpeed = 20;
+
+    Rectangle scrollArea = {textBoxX, textBoxY, textBoxWidth, textBoxHeight};
+    BeginScissorMode(scrollArea.x, scrollArea.y, scrollArea.width, scrollArea.height);
+    {
+        int textY = textBoxY - scrollOffset;
+
+        // Split the OCR text into lines that fit the text box width
+        std::vector<std::string> wrappedLines = WrapText(defaultFont, ocrText, contentFontSize, textBoxWidth - 20);
+        for (const auto &line : wrappedLines) {
+            DrawTextEx(defaultFont, line.c_str(), (Vector2){textBoxX + 10, textY}, contentFontSize, 2, BLACK);
+            textY += contentFontSize + 5; // Adjust line spacing
+        }
+
+        // Allow scrolling with arrow keys
+        if (IsKeyDown(KEY_DOWN)) {
+            scrollOffset = std::min(scrollOffset + scrollSpeed, (int)(wrappedLines.size() * (contentFontSize + 5) - textBoxHeight));
+        } else if (IsKeyDown(KEY_UP)) {
+            scrollOffset = std::max(scrollOffset - scrollSpeed, 0);
+        }
+    }
+    EndScissorMode();
+
+    // Draw a copy button below the text box
+    Rectangle copyButton = {
+        (float)(screenW / 2 - 150),
+        (float)(textBoxY + textBoxHeight + 20),
+        300.f, 70.f
+    };
+
+    if (GuiButton(copyButton, "Copy to Clipboard")) {
+        SetClipboardText(ocrText.c_str());
+    }
+}
+
