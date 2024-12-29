@@ -7,7 +7,6 @@
 #include "neuron.hpp"
 #include "matrix.hpp"
 using namespace std;
-
 class Layer{
     private:
         int layerSize;
@@ -19,9 +18,9 @@ class Layer{
         vector<double> getActivationVals();
         vector<Neuron*> getNeurons(){return this->neurons;}
         void setNeurons(vector<Neuron*> neurons){this->neurons = neurons;}
-        Matrix* convertValsToMatrix();
-        Matrix* convertActivationValsToMatrix();
-        Matrix* convertDifferentiatedValsToMatrix();
+        NN::Matrix* convertValsToMatrix();
+        NN::Matrix* convertActivationValsToMatrix();
+        NN::Matrix* convertDifferentiatedValsToMatrix();
         ~Layer();    
 };
 

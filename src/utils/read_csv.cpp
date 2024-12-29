@@ -1,6 +1,7 @@
 #include "../../include/utils/read_csv.hpp"
 using namespace readData;
 
+
 vector< vector<double> > readCSV::fetchData(string path) {
   vector< vector<double> > data;
 

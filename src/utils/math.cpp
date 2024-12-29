@@ -1,4 +1,5 @@
 #include "../../include/utils/math.hpp"
+using namespace NN;
 
 void utils::Math::multiplyMatrix(Matrix *a, Matrix *b, Matrix *c) {
   for(int i = 0; i < a->getNumRows(); i++) {

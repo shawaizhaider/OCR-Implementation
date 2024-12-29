@@ -15,8 +15,8 @@ namespace utils
   class Math
   {
   public:
-    static void multiplyMatrix(Matrix *a, Matrix *b, Matrix *c);
-    static Matrix *multiplyTwoMatrix(Matrix *a, Matrix *b);
+    static void multiplyMatrix(NN::Matrix *a, NN::Matrix *b, NN::Matrix *c);
+    static NN::Matrix *multiplyTwoMatrix(NN::Matrix *a, NN::Matrix *b);
   };
 }
 

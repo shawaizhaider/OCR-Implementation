@@ -1,5 +1,5 @@
 #include "../include/neuralNetwork.hpp"
-
+using namespace NN;
 
 void neuralNetwork::loadWeights(string filename){
     ifstream file(filename);

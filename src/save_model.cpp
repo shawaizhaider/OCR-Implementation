@@ -1,5 +1,6 @@
 #include "../include/neuralNetwork.hpp"
 
+using namespace NN;
 
 void neuralNetwork::saveWeights(string filename){
     json j = {};

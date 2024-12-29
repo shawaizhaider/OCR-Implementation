@@ -8,6 +8,7 @@
 #include <time.h>
 
 using namespace std;
+using namespace NN;
 using json = nlohmann::json;
 
 void printSyntax(){

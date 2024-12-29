@@ -1,5 +1,5 @@
 #include "raylib.h"
-#include "raygui.h"
+#include "../../include/GUI/raygui.h"
 #include <stdlib.h>
 #include "../../include/GUI/interface.hpp"
 
@@ -62,60 +62,65 @@ void drawTitleAndButtons(const char *titleText, bool &uploadMode, bool &trainMod
     const int screenW = GetScreenWidth();
     const int screenH = GetScreenHeight();
     const int titleFontSize = 60;  
+    
+    // Draw title
     const int titlePositionX = screenW / 2 - MeasureText(titleText, titleFontSize) / 2;
     const int titlePositionY = screenH / 8;
     DrawText(titleText, titlePositionX, titlePositionY, titleFontSize, DARKGRAY);
 
+    // Button configurations
     const int buttonWidth = 300;
-    const int buttonHeight = 60; // Adjusted to fit all buttons
+    const int buttonHeight = 60;
     const int buttonSpacing = 20;
+    const float roundness = 0.2f;
+    const int segments = 10;
 
-    // Button positions
+    // Calculate button positions
     Rectangle uploadButton = {
         (float)(screenW / 2 - buttonWidth / 2),
         (float)(screenH / 3),
         (float)buttonWidth, (float)buttonHeight
     };
     Rectangle trainButton = {
-        (float)(screenW / 2 - buttonWidth / 2),
-        (float)(uploadButton.y + buttonHeight + buttonSpacing),
+        uploadButton.x,
+        uploadButton.y + buttonHeight + buttonSpacing,
         (float)buttonWidth, (float)buttonHeight
     };
     Rectangle loadButton = {
-        (float)(screenW / 2 - buttonWidth / 2),
-        (float)(trainButton.y + buttonHeight + buttonSpacing),
+        trainButton.x,
+        trainButton.y + buttonHeight + buttonSpacing,
         (float)buttonWidth, (float)buttonHeight
     };
     Rectangle charRecogButton = {
-        (float)(screenW / 2 - buttonWidth / 2),
-        (float)(loadButton.y + buttonHeight + buttonSpacing),
+        loadButton.x,
+        loadButton.y + buttonHeight + buttonSpacing,
         (float)buttonWidth, (float)buttonHeight
     };
     Rectangle exitButton = {
-        (float)(screenW / 2 - buttonWidth / 2),
-        (float)(charRecogButton.y + buttonHeight + buttonSpacing),
+        charRecogButton.x,
+        charRecogButton.y + buttonHeight + buttonSpacing,
         (float)buttonWidth, (float)buttonHeight
     };
 
-    // Set GUI styles
-    GuiSetStyle(DEFAULT, TEXT_SIZE, 30);
+    // Set GUI style
+    GuiSetStyle(DEFAULT, TEXT_SIZE, 20);
+    GuiSetStyle(DEFAULT, TEXT_SPACING, 2);
+    GuiSetStyle(DEFAULT, BORDER_WIDTH, 2);
 
-    // Buttons and corresponding actions
-    if (GuiButton(uploadButton, "Upload Image")) {
-        uploadMode = true;
-    }
-    if (GuiButton(trainButton, "Train Custom Model")) {
-        trainMode = true; // Switch to train mode
-    }
-    if (GuiButton(loadButton, "Load Custom Model")) {
-        loadModelMode = true; // Switch to load model mode
-    }
-    if (GuiButton(charRecogButton, "Character Recognition")) {
-        charRecognitionMode = true; // Switch to character recognition mode
-    }
-    if (GuiButton(exitButton, "Exit")) {
-        CloseWindow();
-    }
+    // Draw button backgrounds
+    Color buttonBg = Fade(LIGHTGRAY, 0.5f);
+    DrawRectangleRounded(uploadButton, roundness, segments, buttonBg);
+    DrawRectangleRounded(trainButton, roundness, segments, buttonBg);
+    DrawRectangleRounded(loadButton, roundness, segments, buttonBg);
+    DrawRectangleRounded(charRecogButton, roundness, segments, buttonBg);
+    DrawRectangleRounded(exitButton, roundness, segments, buttonBg);
+
+    // Handle button actions
+    if (GuiButton(uploadButton, "Upload Image")) uploadMode = true;
+    if (GuiButton(trainButton, "Train Custom Model")) trainMode = true;
+    if (GuiButton(loadButton, "Load Custom Model")) loadModelMode = true;
+    if (GuiButton(charRecogButton, "Character Recognition")) charRecognitionMode = true;
+    if (GuiButton(exitButton, "Exit")) CloseWindow();
 }
 
 
@@ -205,55 +210,103 @@ std::vector<std::string> WrapText(Font &font, const std::string &text, int fontS
 }
 
 void drawOCRResult(const std::string &ocrText) {
-    const int screenW = GetScreenWidth();
-    const int screenH = GetScreenHeight();
-    const int textBoxWidth = screenW - 300;
-    const int textBoxHeight = screenH - 300;
-    const int textBoxX = (screenW - textBoxWidth) / 2;
-    const int textBoxY = (screenH - textBoxHeight) / 2;
+    int screenWidth = GetScreenWidth();
+    int screenHeight = GetScreenHeight();
 
-    Font defaultFont = GetFontDefault(); // Using Raylib's default font
-    const int titleFontSize = 30;
-    const int contentFontSize = 20;
-    const Color titleColor = DARKGRAY;
-
-    // Draw the title
-    DrawTextEx(defaultFont, "OCR Result:", (Vector2){textBoxX, textBoxY - 50}, titleFontSize, 2, titleColor);
-
-    // Scrollable area for large OCR text
-    static int scrollOffset = 0; // Keep track of scroll position
-    const int scrollSpeed = 20;
-
-    Rectangle scrollArea = {textBoxX, textBoxY, textBoxWidth, textBoxHeight};
-    BeginScissorMode(scrollArea.x, scrollArea.y, scrollArea.width, scrollArea.height);
-    {
-        int textY = textBoxY - scrollOffset;
-
-        // Split the OCR text into lines that fit the text box width
-        std::vector<std::string> wrappedLines = WrapText(defaultFont, ocrText, contentFontSize, textBoxWidth - 20);
-        for (const auto &line : wrappedLines) {
-            DrawTextEx(defaultFont, line.c_str(), (Vector2){textBoxX + 10, textY}, contentFontSize, 2, BLACK);
-            textY += contentFontSize + 5; // Adjust line spacing
-        }
-
-        // Allow scrolling with arrow keys
-        if (IsKeyDown(KEY_DOWN)) {
-            scrollOffset = std::min(scrollOffset + scrollSpeed, (int)(wrappedLines.size() * (contentFontSize + 5) - textBoxHeight));
-        } else if (IsKeyDown(KEY_UP)) {
-            scrollOffset = std::max(scrollOffset - scrollSpeed, 0);
-        }
-    }
-    EndScissorMode();
-
-    // Draw a copy button below the text box
-    Rectangle copyButton = {
-        (float)(screenW / 2 - 150),
-        (float)(textBoxY + textBoxHeight + 20),
-        300.f, 70.f
-    };
-
-    if (GuiButton(copyButton, "Copy to Clipboard")) {
-        SetClipboardText(ocrText.c_str());
-    }
+    int fontSize = 30;
+    Font font = GetFontDefault();
+    int textWidth = MeasureText("Character Recognition", fontSize);
+    
+    // Calculate box dimensions with padding
+    float padding = 20.0f;
+    float boxWidth = textWidth + padding * 2;
+    float boxHeight = fontSize + padding * 2;
+    
+    // Center the box horizontally
+    float boxX = (screenWidth - boxWidth) / 2;
+    float boxY = 20;  // Fixed distance from top
+    
+    // Draw background box
+    DrawRectangleRounded(
+        {boxX, boxY, boxWidth, boxHeight},
+        0.2f,  // roundness
+        10,    // segments
+        Fade(LIGHTGRAY, 0.5f)
+    );
+    
+    // Draw text centered in box
+    DrawText("Character Recognition",
+            boxX + padding,
+            boxY + padding/2,
+            fontSize,
+            BLACK);
+            
+    // Draw OCR result text below
+    Vector2 textPos = {40, boxY + boxHeight + 40};
+    DrawText(ocrText.c_str(), textPos.x, textPos.y, 20, BLACK);
 }
 
+void drawFileListAndLoadButton(int &filePathCounter, char *filePaths[], bool &imageLoaded, 
+                               Image &loadedImage, Texture2D &texture, std::string &ocrText, 
+                               bool &ocrMode) {
+    const int buttonWidth = 300;
+    const int buttonHeight = 70;
+    const int buttonSpacing = 30;
+
+    const int imageMaxWidth = 600;
+    const int imageMaxHeight = 400;
+    const int screenMargin = 20;
+
+    DrawText("Dropped files:", screenMargin, screenMargin, 20, DARKGRAY);
+    for (int i = 0; i < filePathCounter; i++) {
+        DrawText(filePaths[i], screenMargin, screenMargin + 30 + 20 * i, 10, GRAY);
+    }
+
+    Rectangle imageRect = {
+        (float)(GetScreenWidth() / 2 - imageMaxWidth / 2),
+        (float)(screenMargin + 80),
+        (float)imageMaxWidth,
+        (float)imageMaxHeight
+    };
+
+    // Draw the loaded image (if any)
+    if (imageLoaded) {
+        float scaleX = imageRect.width / loadedImage.width;
+        float scaleY = imageRect.height / loadedImage.height;
+        float scale = (scaleX < scaleY) ? scaleX : scaleY; // Maintain aspect ratio
+
+        Rectangle sourceRect = { 0, 0, (float)loadedImage.width, (float)loadedImage.height };
+        Rectangle destRect = {
+            imageRect.x,
+            imageRect.y,
+            loadedImage.width * scale,
+            loadedImage.height * scale
+        };
+
+        destRect.x += (imageRect.width - destRect.width) / 2;
+        destRect.y += (imageRect.height - destRect.height) / 2;
+
+        DrawTexturePro(texture, sourceRect, destRect, { 0, 0 }, 0.0f, WHITE);
+    } else {
+      
+        DrawRectangleRec(imageRect, LIGHTGRAY);
+        DrawText("No Image Loaded", (int)(imageRect.x + 10), (int)(imageRect.y + 10), 20, DARKGRAY);
+    }
+
+    Rectangle loadButton = {
+        (float)(GetScreenWidth() / 2 - buttonWidth / 2),
+        (float)(imageRect.y + imageRect.height + buttonSpacing),
+        (float)buttonWidth,
+        (float)buttonHeight
+    };
+
+    if (GuiButton(loadButton, "Load Image")) {
+        if (filePathCounter > 0) {
+            loadedImage = LoadImage(filePaths[0]);
+            texture = LoadTextureFromImage(loadedImage);
+            imageLoaded = true;
+            ocrText = runOCR(filePaths[0]);
+            ocrMode = true;
+        }
+    }
+}

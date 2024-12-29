@@ -48,10 +48,11 @@ class neuralNetwork{
         vector<int> topology;
         int numLayers;
         vector<double> inputVals;
-        vector<Matrix*> weightsMatrices;
-        vector<Matrix*> gradients;
+        vector<NN::Matrix*> weightsMatrices;
+        vector<NN::Matrix*> gradients;
         vector<Layer*> layers;
         vector<double> input;
+        vector<double> output;
         /*Errors of model or differences*/
         double globalError;   // Total Error
         vector<double> errors;  // Errors of each target and output pair
@@ -74,10 +75,10 @@ class neuralNetwork{
         void printNetwork();
         void feedForward();
         void backPropagate();
-        Matrix* getNeuronMatrix(int index){return this->layers[index]->convertValsToMatrix();}
-        Matrix* getActivationMatrix(int index){return this->layers[index]->convertActivationValsToMatrix();}
-        Matrix* getDifferentiatedMatrix(int index){return this->layers[index]->convertDifferentiatedValsToMatrix();}
-        Matrix* getWeightMatrix(int index){return this->weightsMatrices[index];}
+        NN::Matrix* getNeuronMatrix(int index){return this->layers[index]->convertValsToMatrix();}
+        NN::Matrix* getActivationMatrix(int index){return this->layers[index]->convertActivationValsToMatrix();}
+        NN::Matrix* getDifferentiatedMatrix(int index){return this->layers[index]->convertDifferentiatedValsToMatrix();}
+        NN::Matrix* getWeightMatrix(int index){return this->weightsMatrices[index];}
         int getBiasIndex(int layerIndex, int neuronIndex);
         vector<double> getBiases(){return this->biases;}
         void setNeuronVal(int layerIndex, int neuronIndex, double val){this->layers[layerIndex]->setVal(neuronIndex, val);}
@@ -99,7 +100,8 @@ class neuralNetwork{
         void loadModel(string file);
         void setBias(int index, double val){ this->biases[index] = val; }
         double getBias(int index){ return this->biases[index]; }
-        double getGlobalError(){ return this->globalError; }  
+        double getGlobalError(){ return this->globalError; } 
+        vector<double> getOutput();
         ~neuralNetwork();
 };
 

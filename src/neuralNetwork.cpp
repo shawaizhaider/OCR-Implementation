@@ -1,7 +1,7 @@
 #include "../include/neuralNetwork.hpp"
 #include "../include/utils/math.hpp"
 
-
+using namespace NN;
 
 neuralNetwork::neuralNetwork(vector<int> topology)
 {
@@ -328,6 +328,16 @@ void neuralNetwork::printOutput(){
         cout << activatedOutputMatrix->getMatrixVal(0, i) << "   ";
     }
     cout << endl;
+}
+
+vector<double> neuralNetwork::getOutput(){
+    int idxOutputLayer = this->numLayers - 1;
+    Matrix* activatedOutputMatrix = this->layers[idxOutputLayer]->convertActivationValsToMatrix();
+    vector<double> output;
+    for(int i = 0; i < activatedOutputMatrix->getNumCols(); i++){
+        output.push_back(activatedOutputMatrix->getMatrixVal(0, i));
+    }
+    return output;
 }
 
 void neuralNetwork::printTargets(){

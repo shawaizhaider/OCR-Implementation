@@ -3,6 +3,7 @@
 #include "../include/matrix.hpp"
 
 using namespace std;
+using namespace NN;
 
 int main(int argc, char const **argv)
 {

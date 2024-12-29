@@ -1,5 +1,6 @@
 #include "raylib.h"
 
+
 int main() {
     // Initialize the window
     InitWindow(800, 600, "raylib Test Window");
