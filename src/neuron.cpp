@@ -1,7 +1,6 @@
 #include "../include/neuron.hpp"
 #include <math.h>
 
-
 Neuron::Neuron(double val)
 {
     this->neuronVal = val;

@@ -1,4 +1,5 @@
 #include "../include/layer.hpp"
+using namespace NN;
 
 Layer::Layer(int size)
 {

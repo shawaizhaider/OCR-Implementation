@@ -1,6 +1,7 @@
 #include "../include/matrix.hpp"
 #include <random>
 using namespace std;
+using namespace NN;
 // TODO: Implement Matrix class
 Matrix::Matrix(int numRows, int numCols, bool randomize)
 {

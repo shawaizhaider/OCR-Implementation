@@ -123,6 +123,114 @@ OCR_with_GUI/fast:
 	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/build
 .PHONY : OCR_with_GUI/fast
 
+src/GUI/handleCharacterRecognition.o: src/GUI/handleCharacterRecognition.cpp.o
+
+.PHONY : src/GUI/handleCharacterRecognition.o
+
+# target to build an object file
+src/GUI/handleCharacterRecognition.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleCharacterRecognition.cpp.o
+.PHONY : src/GUI/handleCharacterRecognition.cpp.o
+
+src/GUI/handleCharacterRecognition.i: src/GUI/handleCharacterRecognition.cpp.i
+
+.PHONY : src/GUI/handleCharacterRecognition.i
+
+# target to preprocess a source file
+src/GUI/handleCharacterRecognition.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleCharacterRecognition.cpp.i
+.PHONY : src/GUI/handleCharacterRecognition.cpp.i
+
+src/GUI/handleCharacterRecognition.s: src/GUI/handleCharacterRecognition.cpp.s
+
+.PHONY : src/GUI/handleCharacterRecognition.s
+
+# target to generate assembly for a file
+src/GUI/handleCharacterRecognition.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleCharacterRecognition.cpp.s
+.PHONY : src/GUI/handleCharacterRecognition.cpp.s
+
+src/GUI/handleImageUpload.o: src/GUI/handleImageUpload.cpp.o
+
+.PHONY : src/GUI/handleImageUpload.o
+
+# target to build an object file
+src/GUI/handleImageUpload.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleImageUpload.cpp.o
+.PHONY : src/GUI/handleImageUpload.cpp.o
+
+src/GUI/handleImageUpload.i: src/GUI/handleImageUpload.cpp.i
+
+.PHONY : src/GUI/handleImageUpload.i
+
+# target to preprocess a source file
+src/GUI/handleImageUpload.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleImageUpload.cpp.i
+.PHONY : src/GUI/handleImageUpload.cpp.i
+
+src/GUI/handleImageUpload.s: src/GUI/handleImageUpload.cpp.s
+
+.PHONY : src/GUI/handleImageUpload.s
+
+# target to generate assembly for a file
+src/GUI/handleImageUpload.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleImageUpload.cpp.s
+.PHONY : src/GUI/handleImageUpload.cpp.s
+
+src/GUI/handleLoadCustomModel.o: src/GUI/handleLoadCustomModel.cpp.o
+
+.PHONY : src/GUI/handleLoadCustomModel.o
+
+# target to build an object file
+src/GUI/handleLoadCustomModel.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleLoadCustomModel.cpp.o
+.PHONY : src/GUI/handleLoadCustomModel.cpp.o
+
+src/GUI/handleLoadCustomModel.i: src/GUI/handleLoadCustomModel.cpp.i
+
+.PHONY : src/GUI/handleLoadCustomModel.i
+
+# target to preprocess a source file
+src/GUI/handleLoadCustomModel.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleLoadCustomModel.cpp.i
+.PHONY : src/GUI/handleLoadCustomModel.cpp.i
+
+src/GUI/handleLoadCustomModel.s: src/GUI/handleLoadCustomModel.cpp.s
+
+.PHONY : src/GUI/handleLoadCustomModel.s
+
+# target to generate assembly for a file
+src/GUI/handleLoadCustomModel.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleLoadCustomModel.cpp.s
+.PHONY : src/GUI/handleLoadCustomModel.cpp.s
+
+src/GUI/handleTrainCustomModel.o: src/GUI/handleTrainCustomModel.cpp.o
+
+.PHONY : src/GUI/handleTrainCustomModel.o
+
+# target to build an object file
+src/GUI/handleTrainCustomModel.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleTrainCustomModel.cpp.o
+.PHONY : src/GUI/handleTrainCustomModel.cpp.o
+
+src/GUI/handleTrainCustomModel.i: src/GUI/handleTrainCustomModel.cpp.i
+
+.PHONY : src/GUI/handleTrainCustomModel.i
+
+# target to preprocess a source file
+src/GUI/handleTrainCustomModel.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleTrainCustomModel.cpp.i
+.PHONY : src/GUI/handleTrainCustomModel.cpp.i
+
+src/GUI/handleTrainCustomModel.s: src/GUI/handleTrainCustomModel.cpp.s
+
+.PHONY : src/GUI/handleTrainCustomModel.s
+
+# target to generate assembly for a file
+src/GUI/handleTrainCustomModel.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/handleTrainCustomModel.cpp.s
+.PHONY : src/GUI/handleTrainCustomModel.cpp.s
+
 src/GUI/interface.o: src/GUI/interface.cpp.o
 
 .PHONY : src/GUI/interface.o
@@ -177,32 +285,302 @@ src/GUI/main.cpp.s:
 	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/main.cpp.s
 .PHONY : src/GUI/main.cpp.s
 
-tests/OCR_test.o: tests/OCR_test.cpp.o
+src/GUI/tinyfiledialogs.o: src/GUI/tinyfiledialogs.cpp.o
 
-.PHONY : tests/OCR_test.o
+.PHONY : src/GUI/tinyfiledialogs.o
 
 # target to build an object file
-tests/OCR_test.cpp.o:
-	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.o
-.PHONY : tests/OCR_test.cpp.o
+src/GUI/tinyfiledialogs.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/tinyfiledialogs.cpp.o
+.PHONY : src/GUI/tinyfiledialogs.cpp.o
 
-tests/OCR_test.i: tests/OCR_test.cpp.i
+src/GUI/tinyfiledialogs.i: src/GUI/tinyfiledialogs.cpp.i
 
-.PHONY : tests/OCR_test.i
+.PHONY : src/GUI/tinyfiledialogs.i
 
 # target to preprocess a source file
-tests/OCR_test.cpp.i:
-	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.i
-.PHONY : tests/OCR_test.cpp.i
+src/GUI/tinyfiledialogs.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/tinyfiledialogs.cpp.i
+.PHONY : src/GUI/tinyfiledialogs.cpp.i
 
-tests/OCR_test.s: tests/OCR_test.cpp.s
+src/GUI/tinyfiledialogs.s: src/GUI/tinyfiledialogs.cpp.s
 
-.PHONY : tests/OCR_test.s
+.PHONY : src/GUI/tinyfiledialogs.s
 
 # target to generate assembly for a file
-tests/OCR_test.cpp.s:
-	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/tests/OCR_test.cpp.s
-.PHONY : tests/OCR_test.cpp.s
+src/GUI/tinyfiledialogs.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/GUI/tinyfiledialogs.cpp.s
+.PHONY : src/GUI/tinyfiledialogs.cpp.s
+
+src/OCR_core.o: src/OCR_core.cpp.o
+
+.PHONY : src/OCR_core.o
+
+# target to build an object file
+src/OCR_core.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/OCR_core.cpp.o
+.PHONY : src/OCR_core.cpp.o
+
+src/OCR_core.i: src/OCR_core.cpp.i
+
+.PHONY : src/OCR_core.i
+
+# target to preprocess a source file
+src/OCR_core.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/OCR_core.cpp.i
+.PHONY : src/OCR_core.cpp.i
+
+src/OCR_core.s: src/OCR_core.cpp.s
+
+.PHONY : src/OCR_core.s
+
+# target to generate assembly for a file
+src/OCR_core.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/OCR_core.cpp.s
+.PHONY : src/OCR_core.cpp.s
+
+src/layer.o: src/layer.cpp.o
+
+.PHONY : src/layer.o
+
+# target to build an object file
+src/layer.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/layer.cpp.o
+.PHONY : src/layer.cpp.o
+
+src/layer.i: src/layer.cpp.i
+
+.PHONY : src/layer.i
+
+# target to preprocess a source file
+src/layer.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/layer.cpp.i
+.PHONY : src/layer.cpp.i
+
+src/layer.s: src/layer.cpp.s
+
+.PHONY : src/layer.s
+
+# target to generate assembly for a file
+src/layer.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/layer.cpp.s
+.PHONY : src/layer.cpp.s
+
+src/load_model.o: src/load_model.cpp.o
+
+.PHONY : src/load_model.o
+
+# target to build an object file
+src/load_model.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/load_model.cpp.o
+.PHONY : src/load_model.cpp.o
+
+src/load_model.i: src/load_model.cpp.i
+
+.PHONY : src/load_model.i
+
+# target to preprocess a source file
+src/load_model.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/load_model.cpp.i
+.PHONY : src/load_model.cpp.i
+
+src/load_model.s: src/load_model.cpp.s
+
+.PHONY : src/load_model.s
+
+# target to generate assembly for a file
+src/load_model.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/load_model.cpp.s
+.PHONY : src/load_model.cpp.s
+
+src/matrix.o: src/matrix.cpp.o
+
+.PHONY : src/matrix.o
+
+# target to build an object file
+src/matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/matrix.cpp.o
+.PHONY : src/matrix.cpp.o
+
+src/matrix.i: src/matrix.cpp.i
+
+.PHONY : src/matrix.i
+
+# target to preprocess a source file
+src/matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/matrix.cpp.i
+.PHONY : src/matrix.cpp.i
+
+src/matrix.s: src/matrix.cpp.s
+
+.PHONY : src/matrix.s
+
+# target to generate assembly for a file
+src/matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/matrix.cpp.s
+.PHONY : src/matrix.cpp.s
+
+src/neuralNetwork.o: src/neuralNetwork.cpp.o
+
+.PHONY : src/neuralNetwork.o
+
+# target to build an object file
+src/neuralNetwork.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/neuralNetwork.cpp.o
+.PHONY : src/neuralNetwork.cpp.o
+
+src/neuralNetwork.i: src/neuralNetwork.cpp.i
+
+.PHONY : src/neuralNetwork.i
+
+# target to preprocess a source file
+src/neuralNetwork.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/neuralNetwork.cpp.i
+.PHONY : src/neuralNetwork.cpp.i
+
+src/neuralNetwork.s: src/neuralNetwork.cpp.s
+
+.PHONY : src/neuralNetwork.s
+
+# target to generate assembly for a file
+src/neuralNetwork.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/neuralNetwork.cpp.s
+.PHONY : src/neuralNetwork.cpp.s
+
+src/neuron.o: src/neuron.cpp.o
+
+.PHONY : src/neuron.o
+
+# target to build an object file
+src/neuron.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/neuron.cpp.o
+.PHONY : src/neuron.cpp.o
+
+src/neuron.i: src/neuron.cpp.i
+
+.PHONY : src/neuron.i
+
+# target to preprocess a source file
+src/neuron.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/neuron.cpp.i
+.PHONY : src/neuron.cpp.i
+
+src/neuron.s: src/neuron.cpp.s
+
+.PHONY : src/neuron.s
+
+# target to generate assembly for a file
+src/neuron.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/neuron.cpp.s
+.PHONY : src/neuron.cpp.s
+
+src/save_model.o: src/save_model.cpp.o
+
+.PHONY : src/save_model.o
+
+# target to build an object file
+src/save_model.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/save_model.cpp.o
+.PHONY : src/save_model.cpp.o
+
+src/save_model.i: src/save_model.cpp.i
+
+.PHONY : src/save_model.i
+
+# target to preprocess a source file
+src/save_model.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/save_model.cpp.i
+.PHONY : src/save_model.cpp.i
+
+src/save_model.s: src/save_model.cpp.s
+
+.PHONY : src/save_model.s
+
+# target to generate assembly for a file
+src/save_model.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/save_model.cpp.s
+.PHONY : src/save_model.cpp.s
+
+src/utils/GUI_utils.o: src/utils/GUI_utils.cpp.o
+
+.PHONY : src/utils/GUI_utils.o
+
+# target to build an object file
+src/utils/GUI_utils.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/GUI_utils.cpp.o
+.PHONY : src/utils/GUI_utils.cpp.o
+
+src/utils/GUI_utils.i: src/utils/GUI_utils.cpp.i
+
+.PHONY : src/utils/GUI_utils.i
+
+# target to preprocess a source file
+src/utils/GUI_utils.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/GUI_utils.cpp.i
+.PHONY : src/utils/GUI_utils.cpp.i
+
+src/utils/GUI_utils.s: src/utils/GUI_utils.cpp.s
+
+.PHONY : src/utils/GUI_utils.s
+
+# target to generate assembly for a file
+src/utils/GUI_utils.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/GUI_utils.cpp.s
+.PHONY : src/utils/GUI_utils.cpp.s
+
+src/utils/math.o: src/utils/math.cpp.o
+
+.PHONY : src/utils/math.o
+
+# target to build an object file
+src/utils/math.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/math.cpp.o
+.PHONY : src/utils/math.cpp.o
+
+src/utils/math.i: src/utils/math.cpp.i
+
+.PHONY : src/utils/math.i
+
+# target to preprocess a source file
+src/utils/math.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/math.cpp.i
+.PHONY : src/utils/math.cpp.i
+
+src/utils/math.s: src/utils/math.cpp.s
+
+.PHONY : src/utils/math.s
+
+# target to generate assembly for a file
+src/utils/math.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/math.cpp.s
+.PHONY : src/utils/math.cpp.s
+
+src/utils/read_csv.o: src/utils/read_csv.cpp.o
+
+.PHONY : src/utils/read_csv.o
+
+# target to build an object file
+src/utils/read_csv.cpp.o:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/read_csv.cpp.o
+.PHONY : src/utils/read_csv.cpp.o
+
+src/utils/read_csv.i: src/utils/read_csv.cpp.i
+
+.PHONY : src/utils/read_csv.i
+
+# target to preprocess a source file
+src/utils/read_csv.cpp.i:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/read_csv.cpp.i
+.PHONY : src/utils/read_csv.cpp.i
+
+src/utils/read_csv.s: src/utils/read_csv.cpp.s
+
+.PHONY : src/utils/read_csv.s
+
+# target to generate assembly for a file
+src/utils/read_csv.cpp.s:
+	$(MAKE) -f CMakeFiles/OCR_with_GUI.dir/build.make CMakeFiles/OCR_with_GUI.dir/src/utils/read_csv.cpp.s
+.PHONY : src/utils/read_csv.cpp.s
 
 # Help Target
 help:
@@ -213,15 +591,57 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OCR_with_GUI"
+	@echo "... src/GUI/handleCharacterRecognition.o"
+	@echo "... src/GUI/handleCharacterRecognition.i"
+	@echo "... src/GUI/handleCharacterRecognition.s"
+	@echo "... src/GUI/handleImageUpload.o"
+	@echo "... src/GUI/handleImageUpload.i"
+	@echo "... src/GUI/handleImageUpload.s"
+	@echo "... src/GUI/handleLoadCustomModel.o"
+	@echo "... src/GUI/handleLoadCustomModel.i"
+	@echo "... src/GUI/handleLoadCustomModel.s"
+	@echo "... src/GUI/handleTrainCustomModel.o"
+	@echo "... src/GUI/handleTrainCustomModel.i"
+	@echo "... src/GUI/handleTrainCustomModel.s"
 	@echo "... src/GUI/interface.o"
 	@echo "... src/GUI/interface.i"
 	@echo "... src/GUI/interface.s"
 	@echo "... src/GUI/main.o"
 	@echo "... src/GUI/main.i"
 	@echo "... src/GUI/main.s"
-	@echo "... tests/OCR_test.o"
-	@echo "... tests/OCR_test.i"
-	@echo "... tests/OCR_test.s"
+	@echo "... src/GUI/tinyfiledialogs.o"
+	@echo "... src/GUI/tinyfiledialogs.i"
+	@echo "... src/GUI/tinyfiledialogs.s"
+	@echo "... src/OCR_core.o"
+	@echo "... src/OCR_core.i"
+	@echo "... src/OCR_core.s"
+	@echo "... src/layer.o"
+	@echo "... src/layer.i"
+	@echo "... src/layer.s"
+	@echo "... src/load_model.o"
+	@echo "... src/load_model.i"
+	@echo "... src/load_model.s"
+	@echo "... src/matrix.o"
+	@echo "... src/matrix.i"
+	@echo "... src/matrix.s"
+	@echo "... src/neuralNetwork.o"
+	@echo "... src/neuralNetwork.i"
+	@echo "... src/neuralNetwork.s"
+	@echo "... src/neuron.o"
+	@echo "... src/neuron.i"
+	@echo "... src/neuron.s"
+	@echo "... src/save_model.o"
+	@echo "... src/save_model.i"
+	@echo "... src/save_model.s"
+	@echo "... src/utils/GUI_utils.o"
+	@echo "... src/utils/GUI_utils.i"
+	@echo "... src/utils/GUI_utils.s"
+	@echo "... src/utils/math.o"
+	@echo "... src/utils/math.i"
+	@echo "... src/utils/math.s"
+	@echo "... src/utils/read_csv.o"
+	@echo "... src/utils/read_csv.i"
+	@echo "... src/utils/read_csv.s"
 .PHONY : help
 
 

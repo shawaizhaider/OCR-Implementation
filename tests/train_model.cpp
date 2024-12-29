@@ -9,6 +9,7 @@
 
 using namespace std;
 using json = nlohmann::json;
+using namespace NN;
 
 void printSyntax(){
     cout<<"Correct Syntax: " << endl;

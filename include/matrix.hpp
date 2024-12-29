@@ -7,6 +7,7 @@
 #include "neuron.hpp"
 using namespace std;
 
+namespace NN{
 class Matrix{
     private:
         int numRows,numCols;
@@ -25,6 +26,7 @@ class Matrix{
         int getNumRows(){return this->numRows;}
         int getNumCols(){return this->numCols;}
         ~Matrix();    
+};
 };
 
 #endif // MATRIX_HPP
