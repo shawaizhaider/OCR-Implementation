@@ -5,8 +5,6 @@ Scratch Implementation of OCR in C++.
 
 ```
 
-```
-
 ├── CMakeLists.txt
 ├── config
 │   ├── eval_config.json
@@ -79,5 +77,5 @@ Scratch Implementation of OCR in C++.
     ├── train_model.cpp
     └── train_using_config.cpp
 
-    
+
 ```
